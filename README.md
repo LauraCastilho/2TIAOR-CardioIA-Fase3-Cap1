@@ -2,7 +2,7 @@
 
 <p align="center">
 <a href="https://www.fiap.com.br/">
-  <img src="../../../assets/logo-fiap.png" 
+  <img src="assets/logo-fiap.png" 
        alt="FIAP - Faculdade de Informática e Administração Paulista" 
        width="40%">
 </a>
@@ -69,7 +69,7 @@ Dentre os arquivos e pastas presentes na raiz do projeto, definem-se:
 
 **Arquivo:** [`data/pacientes_cardiologicos.csv`](data/pacientes_cardiologicos.csv) · **Formato:** CSV · **Linhas:** 300 pacientes (mínimo pedido: 100)
 
-**Link para download (OneDrive/Google Drive):** `[COLAR AQUI O LINK PÚBLICO DO DRIVE/ONEDRIVE]`
+**Link para download (OneDrive/Google Drive):** <https://drive.google.com/file/d/1nGFAhySLkrh2F6JwyKHVZk_XLFjmA6td/view?usp=sharing> (pacote também contém as imagens da Parte 3)
 
 ### Origem dos dados
 
@@ -121,7 +121,7 @@ Esse tipo de análise é relevante para um projeto de IA em saúde porque boa pa
 
 **Pasta local:** `data/imagens_ecg/` (150 imagens, não versionada no Git — ver link abaixo) · **Amostra versionada:** [`docs/amostras_ecg/`](docs/amostras_ecg/) (6 imagens)
 
-**Link para download do pacote completo (OneDrive/Google Drive):** `[COLAR AQUI O LINK PÚBLICO DO DRIVE/ONEDRIVE]`
+**Link para download do pacote completo (OneDrive/Google Drive):** <https://drive.google.com/file/d/1nGFAhySLkrh2F6JwyKHVZk_XLFjmA6td/view?usp=sharing>
 
 ### Origem dos dados
 
@@ -152,9 +152,8 @@ Como as Partes 1 e 3 usam dados **simulados**, o maior risco de governança aqui
 
 ## 📎 Links e Observações
 
-- <b>Repositório GitHub</b>: `[COLAR AQUI O LINK DO REPOSITÓRIO]`
-- <b>Dataset numérico (Parte 1)</b>: `[COLAR AQUI O LINK PÚBLICO DO DRIVE/ONEDRIVE]`
-- <b>Pacote de imagens de ECG (Parte 3)</b>: `[COLAR AQUI O LINK PÚBLICO DO DRIVE/ONEDRIVE]`
+- <b>Repositório GitHub</b>: <https://github.com/LauraCastilho/2TIAOR-CardioIA-Fase1-Cap1>
+- <b>Dataset numérico (Parte 1) e pacote de imagens de ECG (Parte 3)</b>: <https://drive.google.com/file/d/1nGFAhySLkrh2F6JwyKHVZk_XLFjmA6td/view?usp=sharing> (mesmo pacote .zip contém os dois)
 - <b>Explicação de decisões técnicas</b>: ver seções "Origem dos dados" de cada parte, acima.
 - <b>Observações Gerais</b>: atividade não está vinculada a nenhuma competição externa.
 
