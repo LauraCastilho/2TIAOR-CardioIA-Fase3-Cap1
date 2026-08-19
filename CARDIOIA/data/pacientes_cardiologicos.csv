@@ -1,0 +1,301 @@
+paciente_id,idade,sexo,pressao_sistolica_mmhg,pressao_diastolica_mmhg,colesterol_total_mg_dl,colesterol_hdl_mg_dl,glicemia_jejum_mg_dl,imc,tabagista,diabetico,historico_familiar_dcv,nivel_atividade_fisica,frequencia_cardiaca_repouso_bpm,tipo_dor_peito,sintomas_relatados,diagnostico_dcv,ecg_imagem_ref
+1,59,M,144,86,231,35,99,28.1,Nao,Nao,Nao,Moderado,89,Assintomatico,Nenhum sintoma relatado,0,ecg_paciente_0001.png
+2,40,M,102,67,191,65,92,23.9,Nao,Nao,Nao,Moderado,77,Angina tipica,Nenhum sintoma relatado,0,ecg_paciente_0002.png
+3,66,M,125,85,207,44,80,22.9,Nao,Nao,Sim,Intenso,84,Assintomatico,"Dor no peito, Inchaco nos tornozelos",0,ecg_paciente_0003.png
+4,68,M,122,73,196,48,86,20.4,Nao,Nao,Nao,Sedentario,76,Angina atipica,"Inchaco nos tornozelos, Tontura",1,ecg_paciente_0004.png
+5,28,M,141,90,197,43,152,26.6,Nao,Sim,Nao,Sedentario,72,Angina tipica,"Dor no peito, Falta de ar",1,ecg_paciente_0005.png
+6,37,F,117,71,191,36,134,26.4,Nao,Sim,Nao,Intenso,63,Angina tipica,"Dor no peito, Inchaco nos tornozelos",1,ecg_paciente_0006.png
+7,57,M,115,73,232,34,97,24.3,Sim,Nao,Nao,Sedentario,78,Angina tipica,Dor no peito,1,ecg_paciente_0007.png
+8,51,F,130,88,187,55,79,27.0,Sim,Nao,Sim,Sedentario,81,Angina tipica,"Tontura, Palpitacoes",0,ecg_paciente_0008.png
+9,55,F,130,83,225,25,162,28.7,Nao,Sim,Sim,Sedentario,87,Angina atipica,"Suor frio, Tontura",0,ecg_paciente_0009.png
+10,43,M,115,62,162,48,76,18.6,Nao,Nao,Sim,Moderado,51,Assintomatico,Fadiga,0,ecg_paciente_0010.png
+11,67,M,129,82,265,42,96,24.8,Nao,Nao,Nao,Intenso,73,Dor nao anginosa,Nenhum sintoma relatado,0,ecg_paciente_0011.png
+12,66,F,125,84,206,61,86,28.6,Nao,Nao,Nao,Moderado,89,Dor nao anginosa,Nenhum sintoma relatado,0,ecg_paciente_0012.png
+13,56,F,138,84,252,51,227,29.2,Nao,Sim,Sim,Moderado,82,Angina tipica,"Falta de ar, Tontura, Inchaco nos tornozelos",1,ecg_paciente_0013.png
+14,71,F,103,69,175,49,96,22.0,Nao,Nao,Nao,Sedentario,58,Angina atipica,Nenhum sintoma relatado,0,ecg_paciente_0014.png
+15,62,F,123,73,212,58,153,27.8,Nao,Sim,Nao,Sedentario,99,Assintomatico,Palpitacoes,0,ecg_paciente_0015.png
+16,43,F,130,73,172,43,83,30.2,Sim,Nao,Nao,Moderado,76,Dor nao anginosa,Nenhum sintoma relatado,0,ecg_paciente_0016.png
+17,60,F,125,78,205,53,93,30.3,Nao,Nao,Nao,Sedentario,84,Angina tipica,"Palpitacoes, Inchaco nos tornozelos, Dor no peito",1,ecg_paciente_0017.png
+18,42,M,117,64,217,35,80,27.3,Nao,Nao,Sim,Sedentario,83,Angina tipica,"Suor frio, Dor no peito, Tontura",1,ecg_paciente_0018.png
+19,67,F,129,79,234,57,87,25.3,Nao,Nao,Sim,Sedentario,73,Assintomatico,Inchaco nos tornozelos,0,ecg_paciente_0019.png
+20,54,M,134,90,207,45,89,25.0,Nao,Nao,Nao,Sedentario,70,Angina tipica,Palpitacoes,1,ecg_paciente_0020.png
+21,52,F,135,74,259,34,83,30.0,Sim,Nao,Sim,Moderado,103,Angina atipica,"Falta de ar, Palpitacoes",1,ecg_paciente_0021.png
+22,45,F,90,55,166,58,77,24.7,Nao,Nao,Nao,Moderado,72,Assintomatico,Nenhum sintoma relatado,0,ecg_paciente_0022.png
+23,72,M,151,88,287,39,75,31.9,Sim,Nao,Sim,Sedentario,97,Angina tipica,Dor no peito,1,ecg_paciente_0023.png
+24,53,F,119,73,218,40,65,28.5,Sim,Nao,Sim,Moderado,87,Angina tipica,Tontura,1,ecg_paciente_0024.png
+25,49,M,124,75,246,55,79,29.1,Nao,Nao,Sim,Moderado,65,Dor nao anginosa,Palpitacoes,1,ecg_paciente_0025.png
+26,50,F,106,73,162,50,142,25.6,Nao,Sim,Nao,Moderado,80,Dor nao anginosa,Nenhum sintoma relatado,0,ecg_paciente_0026.png
+27,62,M,118,78,190,52,73,29.8,Nao,Nao,Sim,Moderado,70,Assintomatico,Dor no peito,0,ecg_paciente_0027.png
+28,60,F,131,84,199,46,140,31.2,Nao,Sim,Sim,Sedentario,86,Assintomatico,Nenhum sintoma relatado,0,ecg_paciente_0028.png
+29,61,M,121,76,246,49,113,24.0,Nao,Nao,Nao,Moderado,60,Assintomatico,Nenhum sintoma relatado,0,ecg_paciente_0029.png
+30,61,F,116,74,211,47,84,20.7,Nao,Nao,Nao,Sedentario,56,Dor nao anginosa,Nenhum sintoma relatado,0,ecg_paciente_0030.png
+31,85,F,153,91,251,37,204,35.3,Sim,Sim,Nao,Sedentario,95,Angina atipica,Inchaco nos tornozelos,1,ecg_paciente_0031.png
+32,49,F,121,79,227,53,100,27.7,Nao,Nao,Sim,Sedentario,69,Angina tipica,"Falta de ar, Dor no peito, Suor frio",1,ecg_paciente_0032.png
+33,48,F,125,72,198,69,100,20.4,Nao,Nao,Nao,Moderado,54,Dor nao anginosa,Fadiga,0,ecg_paciente_0033.png
+34,44,F,123,80,234,58,74,24.1,Nao,Nao,Sim,Sedentario,78,Angina tipica,"Falta de ar, Fadiga",1,ecg_paciente_0034.png
+35,64,F,126,84,184,52,89,30.4,Sim,Nao,Nao,Sedentario,100,Angina atipica,Fadiga,1,ecg_paciente_0035.png
+36,71,M,126,79,217,68,73,27.3,Nao,Nao,Sim,Moderado,95,Assintomatico,Falta de ar,0,ecg_paciente_0036.png
+37,53,F,97,59,156,60,121,23.3,Nao,Nao,Nao,Sedentario,65,Assintomatico,Nenhum sintoma relatado,0,ecg_paciente_0037.png
+38,43,M,131,83,169,50,73,32.1,Sim,Nao,Nao,Sedentario,79,Angina tipica,Palpitacoes,1,ecg_paciente_0038.png
+39,43,F,119,59,217,56,79,23.2,Nao,Nao,Sim,Sedentario,82,Assintomatico,"Falta de ar, Inchaco nos tornozelos",0,ecg_paciente_0039.png
+40,64,M,115,73,217,35,80,25.7,Nao,Nao,Sim,Sedentario,92,Dor nao anginosa,Tontura,1,ecg_paciente_0040.png
+41,65,F,132,81,247,38,74,29.4,Nao,Nao,Sim,Sedentario,81,Angina tipica,"Tontura, Falta de ar",1,ecg_paciente_0041.png
+42,63,F,115,71,246,46,178,27.8,Nao,Sim,Nao,Sedentario,75,Angina atipica,"Tontura, Fadiga, Dor no peito",1,ecg_paciente_0042.png
+43,46,M,127,82,169,59,121,27.1,Nao,Nao,Sim,Sedentario,72,Angina atipica,"Falta de ar, Dor no peito",1,ecg_paciente_0043.png
+44,58,F,107,66,183,49,86,29.3,Nao,Nao,Nao,Moderado,79,Angina atipica,Suor frio,0,ecg_paciente_0044.png
+45,57,F,104,59,181,55,76,26.2,Nao,Nao,Nao,Intenso,69,Dor nao anginosa,Nenhum sintoma relatado,0,ecg_paciente_0045.png
+46,58,F,129,79,212,59,65,27.9,Nao,Nao,Nao,Moderado,72,Assintomatico,Nenhum sintoma relatado,0,ecg_paciente_0046.png
+47,67,M,134,83,185,56,89,25.9,Nao,Nao,Nao,Moderado,88,Angina tipica,"Falta de ar, Inchaco nos tornozelos",1,ecg_paciente_0047.png
+48,58,F,113,71,174,50,88,26.4,Nao,Nao,Nao,Intenso,84,Assintomatico,Nenhum sintoma relatado,0,ecg_paciente_0048.png
+49,65,F,124,78,236,40,84,28.0,Nao,Nao,Sim,Intenso,84,Assintomatico,"Palpitacoes, Suor frio",0,ecg_paciente_0049.png
+50,56,M,128,85,206,58,95,27.5,Nao,Nao,Nao,Moderado,91,Dor nao anginosa,Nenhum sintoma relatado,0,ecg_paciente_0050.png
+51,59,M,114,65,175,50,146,30.5,Sim,Sim,Nao,Intenso,78,Angina tipica,"Dor no peito, Inchaco nos tornozelos, Fadiga",1,ecg_paciente_0051.png
+52,64,M,110,69,174,35,166,28.7,Sim,Sim,Nao,Intenso,91,Assintomatico,Inchaco nos tornozelos,0,ecg_paciente_0052.png
+53,35,F,111,75,206,52,88,25.4,Nao,Nao,Nao,Moderado,74,Assintomatico,"Palpitacoes, Fadiga",0,ecg_paciente_0053.png
+54,51,M,137,76,211,49,79,24.4,Nao,Nao,Nao,Moderado,106,Angina tipica,"Tontura, Suor frio, Fadiga",1,ecg_paciente_0054.png
+55,48,F,124,78,191,53,100,27.6,Nao,Nao,Sim,Sedentario,67,Angina atipica,"Dor no peito, Tontura, Suor frio",1,ecg_paciente_0055.png
+56,46,F,121,72,186,58,153,26.2,Nao,Sim,Nao,Sedentario,67,Angina tipica,Palpitacoes,1,ecg_paciente_0056.png
+57,51,M,131,79,195,52,103,27.2,Nao,Nao,Nao,Moderado,78,Angina atipica,"Falta de ar, Fadiga, Palpitacoes",1,ecg_paciente_0057.png
+58,76,F,149,88,236,49,101,35.1,Nao,Nao,Nao,Moderado,85,Angina atipica,"Dor no peito, Suor frio, Falta de ar",1,ecg_paciente_0058.png
+59,43,F,128,79,191,44,75,26.4,Sim,Nao,Nao,Sedentario,99,Angina atipica,"Tontura, Falta de ar, Fadiga",1,ecg_paciente_0059.png
+60,69,M,129,89,193,40,198,28.9,Nao,Sim,Nao,Moderado,73,Angina tipica,"Palpitacoes, Tontura",1,ecg_paciente_0060.png
+61,31,M,130,74,185,51,177,29.0,Nao,Sim,Nao,Moderado,78,Angina atipica,Fadiga,0,ecg_paciente_0061.png
+62,50,M,110,62,193,50,79,26.9,Nao,Nao,Nao,Moderado,85,Angina tipica,"Inchaco nos tornozelos, Palpitacoes, Falta de ar",1,ecg_paciente_0062.png
+63,57,M,139,80,228,45,101,35.3,Nao,Nao,Sim,Sedentario,87,Angina tipica,Falta de ar,1,ecg_paciente_0063.png
+64,63,M,113,79,166,35,96,25.3,Nao,Nao,Nao,Sedentario,66,Angina atipica,"Dor no peito, Inchaco nos tornozelos",0,ecg_paciente_0064.png
+65,65,F,131,79,223,42,105,28.8,Nao,Nao,Sim,Moderado,93,Angina atipica,"Suor frio, Palpitacoes, Tontura",1,ecg_paciente_0065.png
+66,66,M,132,82,247,44,97,25.7,Nao,Nao,Sim,Moderado,94,Angina tipica,"Tontura, Dor no peito",1,ecg_paciente_0066.png
+67,50,M,115,69,208,47,95,25.6,Sim,Nao,Nao,Intenso,81,Dor nao anginosa,"Inchaco nos tornozelos, Falta de ar",1,ecg_paciente_0067.png
+68,49,F,105,60,176,53,106,26.1,Nao,Nao,Nao,Intenso,70,Assintomatico,"Palpitacoes, Falta de ar, Inchaco nos tornozelos",1,ecg_paciente_0068.png
+69,67,F,129,79,204,51,98,29.9,Sim,Nao,Nao,Intenso,80,Angina tipica,"Suor frio, Falta de ar, Fadiga",1,ecg_paciente_0069.png
+70,52,F,144,102,211,33,93,29.7,Sim,Nao,Nao,Sedentario,84,Dor nao anginosa,Palpitacoes,1,ecg_paciente_0070.png
+71,37,F,116,79,180,40,110,29.8,Sim,Nao,Nao,Sedentario,77,Assintomatico,"Inchaco nos tornozelos, Dor no peito",0,ecg_paciente_0071.png
+72,39,M,114,66,202,52,93,25.0,Nao,Nao,Nao,Sedentario,69,Dor nao anginosa,Nenhum sintoma relatado,0,ecg_paciente_0072.png
+73,42,M,126,81,191,56,213,25.5,Nao,Sim,Nao,Moderado,67,Angina tipica,Suor frio,0,ecg_paciente_0073.png
+74,62,F,115,67,176,63,82,35.3,Nao,Nao,Nao,Intenso,65,Angina atipica,"Palpitacoes, Dor no peito, Falta de ar",1,ecg_paciente_0074.png
+75,57,F,120,66,165,60,100,26.7,Nao,Nao,Nao,Sedentario,63,Angina atipica,Falta de ar,0,ecg_paciente_0075.png
+76,65,F,129,85,201,38,145,24.4,Nao,Sim,Nao,Moderado,77,Angina atipica,Nenhum sintoma relatado,0,ecg_paciente_0076.png
+77,49,M,131,87,158,55,91,22.6,Nao,Nao,Nao,Sedentario,67,Assintomatico,Palpitacoes,0,ecg_paciente_0077.png
+78,57,F,120,80,207,51,108,23.7,Nao,Nao,Nao,Sedentario,77,Angina atipica,Nenhum sintoma relatado,0,ecg_paciente_0078.png
+79,64,F,116,70,200,53,68,29.2,Nao,Nao,Nao,Sedentario,78,Angina tipica,"Inchaco nos tornozelos, Palpitacoes, Dor no peito",1,ecg_paciente_0079.png
+80,51,M,126,77,209,55,91,25.1,Nao,Nao,Nao,Sedentario,68,Dor nao anginosa,"Suor frio, Falta de ar, Fadiga",1,ecg_paciente_0080.png
+81,61,F,127,82,223,43,92,26.8,Nao,Nao,Nao,Intenso,87,Assintomatico,Nenhum sintoma relatado,0,ecg_paciente_0081.png
+82,46,F,110,70,197,55,83,25.2,Nao,Nao,Nao,Sedentario,67,Assintomatico,Nenhum sintoma relatado,0,ecg_paciente_0082.png
+83,50,M,116,70,167,55,121,28.5,Nao,Nao,Nao,Moderado,69,Dor nao anginosa,Fadiga,0,ecg_paciente_0083.png
+84,50,M,121,67,161,60,91,23.1,Nao,Nao,Nao,Moderado,75,Angina tipica,"Palpitacoes, Suor frio",1,ecg_paciente_0084.png
+85,38,F,116,72,196,43,87,23.3,Nao,Nao,Sim,Sedentario,59,Assintomatico,Suor frio,0,ecg_paciente_0085.png
+86,62,M,139,92,234,36,177,30.2,Nao,Sim,Sim,Sedentario,81,Angina atipica,"Tontura, Suor frio, Dor no peito",1,ecg_paciente_0086.png
+87,48,M,114,65,149,33,68,27.3,Nao,Nao,Nao,Moderado,78,Assintomatico,"Tontura, Fadiga",0,ecg_paciente_0087.png
+88,55,M,131,84,187,44,83,27.8,Nao,Nao,Nao,Sedentario,60,Assintomatico,"Falta de ar, Inchaco nos tornozelos",0,ecg_paciente_0088.png
+89,62,M,133,84,224,37,222,26.3,Nao,Sim,Sim,Intenso,95,Angina tipica,"Falta de ar, Palpitacoes",1,ecg_paciente_0089.png
+90,61,F,112,73,191,39,84,29.4,Nao,Nao,Nao,Sedentario,91,Angina tipica,"Suor frio, Falta de ar",1,ecg_paciente_0090.png
+91,64,F,114,75,207,47,155,25.3,Sim,Sim,Nao,Moderado,77,Angina tipica,"Dor no peito, Inchaco nos tornozelos",1,ecg_paciente_0091.png
+92,54,M,126,75,255,42,156,26.9,Nao,Sim,Sim,Moderado,87,Assintomatico,Suor frio,1,ecg_paciente_0092.png
+93,49,F,103,56,177,37,108,22.3,Nao,Nao,Nao,Sedentario,79,Assintomatico,"Inchaco nos tornozelos, Palpitacoes",0,ecg_paciente_0093.png
+94,54,F,128,77,266,48,98,31.7,Nao,Nao,Nao,Sedentario,75,Angina tipica,"Suor frio, Palpitacoes",1,ecg_paciente_0094.png
+95,31,M,102,68,173,48,87,27.1,Nao,Nao,Nao,Intenso,75,Assintomatico,Nenhum sintoma relatado,0,ecg_paciente_0095.png
+96,35,F,109,65,169,58,89,27.4,Nao,Nao,Nao,Sedentario,63,Angina atipica,"Suor frio, Dor no peito",0,ecg_paciente_0096.png
+97,36,M,115,68,194,40,82,30.5,Nao,Nao,Sim,Sedentario,70,Angina atipica,"Tontura, Dor no peito",1,ecg_paciente_0097.png
+98,41,F,111,60,181,54,80,34.4,Nao,Nao,Nao,Sedentario,62,Assintomatico,Nenhum sintoma relatado,0,ecg_paciente_0098.png
+99,61,F,139,95,219,44,79,22.0,Nao,Nao,Nao,Sedentario,82,Angina tipica,"Falta de ar, Fadiga, Tontura",1,ecg_paciente_0099.png
+100,42,F,115,75,211,59,85,22.5,Nao,Nao,Nao,Moderado,77,Dor nao anginosa,Nenhum sintoma relatado,0,ecg_paciente_0100.png
+101,50,M,119,78,170,52,80,24.2,Nao,Nao,Nao,Moderado,71,Angina tipica,"Inchaco nos tornozelos, Fadiga",0,ecg_paciente_0101.png
+102,73,F,136,89,257,38,73,26.4,Nao,Nao,Sim,Sedentario,75,Angina tipica,Falta de ar,1,ecg_paciente_0102.png
+103,50,M,117,75,195,38,95,22.9,Nao,Nao,Sim,Moderado,64,Angina tipica,Suor frio,1,ecg_paciente_0103.png
+104,65,M,143,87,205,28,175,28.3,Sim,Sim,Nao,Sedentario,90,Angina tipica,"Falta de ar, Dor no peito",1,ecg_paciente_0104.png
+105,42,M,116,71,186,51,112,21.2,Nao,Nao,Nao,Sedentario,84,Angina atipica,"Palpitacoes, Inchaco nos tornozelos",1,ecg_paciente_0105.png
+106,52,F,117,70,229,48,84,28.0,Sim,Nao,Sim,Moderado,80,Dor nao anginosa,Nenhum sintoma relatado,0,ecg_paciente_0106.png
+107,42,M,108,80,142,53,224,24.7,Nao,Sim,Nao,Intenso,62,Dor nao anginosa,"Tontura, Dor no peito",0,ecg_paciente_0107.png
+108,50,F,107,69,198,54,96,28.3,Nao,Nao,Nao,Sedentario,82,Angina tipica,"Palpitacoes, Tontura",1,ecg_paciente_0108.png
+109,67,F,138,83,193,39,89,30.3,Nao,Nao,Nao,Sedentario,82,Angina tipica,Palpitacoes,1,ecg_paciente_0109.png
+110,31,M,123,79,155,45,101,27.8,Nao,Nao,Nao,Moderado,68,Assintomatico,Dor no peito,0,ecg_paciente_0110.png
+111,61,M,125,72,232,44,101,26.2,Sim,Nao,Sim,Moderado,70,Assintomatico,Falta de ar,0,ecg_paciente_0111.png
+112,58,M,144,97,202,48,96,34.4,Nao,Nao,Nao,Sedentario,92,Angina tipica,Fadiga,1,ecg_paciente_0112.png
+113,47,F,127,75,199,46,89,29.0,Sim,Nao,Nao,Sedentario,60,Angina atipica,"Falta de ar, Fadiga",1,ecg_paciente_0113.png
+114,35,F,116,74,182,69,88,19.6,Sim,Nao,Nao,Moderado,77,Assintomatico,"Palpitacoes, Tontura",0,ecg_paciente_0114.png
+115,56,M,125,83,190,43,76,23.8,Nao,Nao,Nao,Sedentario,72,Dor nao anginosa,Nenhum sintoma relatado,0,ecg_paciente_0115.png
+116,48,F,115,73,169,53,82,20.1,Sim,Nao,Nao,Sedentario,67,Assintomatico,Nenhum sintoma relatado,0,ecg_paciente_0116.png
+117,58,M,131,82,236,48,85,28.1,Nao,Nao,Sim,Sedentario,97,Assintomatico,"Inchaco nos tornozelos, Fadiga, Dor no peito",1,ecg_paciente_0117.png
+118,55,F,122,76,167,50,79,26.1,Nao,Nao,Sim,Sedentario,68,Dor nao anginosa,Fadiga,1,ecg_paciente_0118.png
+119,77,F,136,84,192,42,97,26.1,Nao,Nao,Nao,Moderado,73,Angina atipica,"Dor no peito, Palpitacoes",0,ecg_paciente_0119.png
+120,52,F,124,74,175,43,106,31.7,Sim,Nao,Nao,Intenso,67,Assintomatico,Nenhum sintoma relatado,0,ecg_paciente_0120.png
+121,41,F,123,74,218,45,81,28.4,Sim,Nao,Nao,Moderado,79,Angina tipica,Palpitacoes,1,ecg_paciente_0121.png
+122,58,F,131,89,229,40,95,29.3,Nao,Nao,Nao,Moderado,73,Assintomatico,"Palpitacoes, Suor frio",0,ecg_paciente_0122.png
+123,58,M,116,71,180,36,80,23.6,Sim,Nao,Nao,Intenso,60,Assintomatico,Dor no peito,0,ecg_paciente_0123.png
+124,74,M,132,78,226,41,88,24.0,Nao,Nao,Nao,Sedentario,70,Angina tipica,Fadiga,1,ecg_paciente_0124.png
+125,67,M,125,75,200,36,84,28.0,Sim,Nao,Sim,Sedentario,92,Angina tipica,"Fadiga, Suor frio, Falta de ar",1,ecg_paciente_0125.png
+126,60,M,126,84,224,57,99,26.5,Nao,Nao,Nao,Intenso,72,Angina atipica,Nenhum sintoma relatado,0,ecg_paciente_0126.png
+127,75,F,145,93,183,52,84,21.4,Nao,Nao,Nao,Sedentario,82,Assintomatico,Nenhum sintoma relatado,0,ecg_paciente_0127.png
+128,38,F,108,70,193,50,131,24.1,Nao,Sim,Nao,Moderado,64,Angina atipica,Nenhum sintoma relatado,0,ecg_paciente_0128.png
+129,46,F,120,73,217,39,149,28.8,Sim,Sim,Sim,Moderado,79,Angina atipica,"Suor frio, Palpitacoes",1,ecg_paciente_0129.png
+130,42,M,119,77,243,34,84,26.1,Sim,Nao,Nao,Sedentario,91,Angina tipica,Tontura,1,ecg_paciente_0130.png
+131,50,F,120,71,178,53,77,22.2,Nao,Nao,Nao,Moderado,65,Assintomatico,"Palpitacoes, Falta de ar, Dor no peito",1,ecg_paciente_0131.png
+132,36,M,125,76,169,54,95,24.6,Sim,Nao,Nao,Sedentario,70,Angina tipica,Dor no peito,1,ecg_paciente_0132.png
+133,64,M,143,94,229,46,124,28.7,Nao,Sim,Nao,Sedentario,97,Angina atipica,Palpitacoes,1,ecg_paciente_0133.png
+134,52,F,128,84,207,45,95,26.6,Nao,Nao,Nao,Moderado,67,Angina atipica,"Suor frio, Dor no peito",0,ecg_paciente_0134.png
+135,34,F,115,66,192,64,119,27.0,Nao,Nao,Nao,Sedentario,62,Angina atipica,Nenhum sintoma relatado,0,ecg_paciente_0135.png
+136,41,F,125,73,176,42,109,29.0,Nao,Nao,Nao,Moderado,70,Assintomatico,Nenhum sintoma relatado,0,ecg_paciente_0136.png
+137,59,M,120,75,172,45,88,24.2,Nao,Nao,Nao,Intenso,68,Assintomatico,"Inchaco nos tornozelos, Tontura",0,ecg_paciente_0137.png
+138,67,F,141,96,229,52,88,26.1,Nao,Nao,Sim,Moderado,82,Angina tipica,Dor no peito,1,ecg_paciente_0138.png
+139,83,M,140,77,235,55,98,30.2,Nao,Nao,Nao,Sedentario,104,Angina tipica,"Tontura, Suor frio",1,ecg_paciente_0139.png
+140,92,F,150,94,217,42,150,31.6,Nao,Sim,Nao,Sedentario,92,Angina atipica,Fadiga,0,ecg_paciente_0140.png
+141,61,F,130,74,201,44,106,26.6,Nao,Nao,Sim,Sedentario,60,Angina tipica,"Inchaco nos tornozelos, Falta de ar",1,ecg_paciente_0141.png
+142,41,M,116,69,196,33,171,28.9,Nao,Sim,Nao,Sedentario,77,Angina tipica,"Falta de ar, Palpitacoes",1,ecg_paciente_0142.png
+143,25,M,120,73,182,43,95,27.4,Nao,Nao,Nao,Intenso,64,Assintomatico,Fadiga,0,ecg_paciente_0143.png
+144,59,M,136,82,260,44,100,32.4,Nao,Nao,Sim,Sedentario,83,Angina tipica,Dor no peito,1,ecg_paciente_0144.png
+145,44,F,107,64,160,59,113,29.2,Nao,Nao,Nao,Sedentario,63,Angina atipica,Palpitacoes,0,ecg_paciente_0145.png
+146,49,M,125,78,206,40,94,24.1,Nao,Nao,Nao,Moderado,76,Angina tipica,Palpitacoes,1,ecg_paciente_0146.png
+147,46,F,105,62,180,57,91,24.8,Sim,Nao,Nao,Sedentario,66,Dor nao anginosa,"Palpitacoes, Dor no peito",0,ecg_paciente_0147.png
+148,53,F,123,69,182,50,110,26.7,Nao,Nao,Sim,Sedentario,81,Dor nao anginosa,Nenhum sintoma relatado,0,ecg_paciente_0148.png
+149,70,F,145,94,220,51,104,28.0,Nao,Nao,Nao,Sedentario,78,Dor nao anginosa,"Fadiga, Tontura",1,ecg_paciente_0149.png
+150,57,M,132,86,190,48,88,25.3,Sim,Nao,Nao,Moderado,70,Angina atipica,Nenhum sintoma relatado,0,ecg_paciente_0150.png
+151,53,F,104,69,156,62,92,21.1,Sim,Nao,Nao,Moderado,99,Angina atipica,"Dor no peito, Suor frio, Fadiga",1,
+152,41,M,123,69,210,48,94,27.3,Sim,Nao,Sim,Sedentario,70,Angina atipica,Dor no peito,1,
+153,32,F,124,78,169,56,96,22.3,Nao,Nao,Nao,Intenso,67,Assintomatico,Fadiga,0,
+154,48,F,107,70,178,66,76,25.0,Sim,Nao,Nao,Intenso,53,Assintomatico,Nenhum sintoma relatado,0,
+155,54,F,123,71,244,34,73,26.2,Sim,Nao,Sim,Moderado,86,Angina tipica,Dor no peito,1,
+156,80,F,161,100,259,59,81,26.5,Sim,Nao,Sim,Sedentario,82,Assintomatico,"Inchaco nos tornozelos, Palpitacoes",1,
+157,57,M,144,89,249,43,204,29.8,Sim,Sim,Sim,Sedentario,82,Assintomatico,Inchaco nos tornozelos,1,
+158,69,M,119,83,188,54,84,26.7,Nao,Nao,Nao,Intenso,83,Dor nao anginosa,Inchaco nos tornozelos,0,
+159,48,M,118,83,200,55,100,28.2,Nao,Nao,Sim,Sedentario,78,Assintomatico,"Dor no peito, Palpitacoes, Tontura",1,
+160,38,M,126,70,167,67,90,32.9,Nao,Nao,Nao,Moderado,77,Angina tipica,"Falta de ar, Inchaco nos tornozelos",1,
+161,41,M,114,83,193,58,94,26.9,Nao,Nao,Nao,Moderado,56,Angina atipica,Nenhum sintoma relatado,0,
+162,45,M,119,69,180,44,77,26.4,Nao,Nao,Nao,Sedentario,83,Assintomatico,Palpitacoes,0,
+163,85,M,144,94,223,51,86,25.7,Sim,Nao,Nao,Moderado,76,Dor nao anginosa,Inchaco nos tornozelos,1,
+164,44,M,114,76,173,52,99,21.1,Nao,Nao,Sim,Intenso,82,Angina tipica,"Inchaco nos tornozelos, Suor frio, Falta de ar",1,
+165,67,M,134,78,207,45,99,33.2,Nao,Nao,Nao,Moderado,91,Dor nao anginosa,Suor frio,1,
+166,42,F,115,74,170,43,83,22.8,Sim,Nao,Nao,Sedentario,76,Dor nao anginosa,Fadiga,0,
+167,68,F,137,84,187,50,94,24.2,Nao,Nao,Nao,Intenso,72,Angina tipica,Tontura,1,
+168,60,M,115,74,223,44,118,26.5,Nao,Nao,Nao,Moderado,76,Angina tipica,"Palpitacoes, Inchaco nos tornozelos",1,
+169,53,M,100,63,196,56,92,25.0,Nao,Nao,Nao,Moderado,64,Assintomatico,Nenhum sintoma relatado,0,
+170,54,M,126,84,205,48,84,23.6,Nao,Nao,Sim,Moderado,75,Angina tipica,"Palpitacoes, Inchaco nos tornozelos",1,
+171,46,F,115,72,208,72,90,23.8,Nao,Nao,Nao,Moderado,64,Angina tipica,Fadiga,1,
+172,61,M,124,76,185,67,93,30.2,Nao,Nao,Nao,Sedentario,55,Dor nao anginosa,"Dor no peito, Fadiga",1,
+173,49,M,125,83,261,50,90,23.9,Nao,Nao,Nao,Sedentario,85,Assintomatico,Nenhum sintoma relatado,0,
+174,38,M,112,72,173,54,92,21.1,Nao,Nao,Sim,Sedentario,69,Dor nao anginosa,Nenhum sintoma relatado,0,
+175,37,M,107,70,148,59,75,26.5,Nao,Nao,Nao,Moderado,56,Assintomatico,Nenhum sintoma relatado,0,
+176,57,M,119,70,179,60,80,27.7,Nao,Nao,Nao,Moderado,68,Dor nao anginosa,"Tontura, Falta de ar, Palpitacoes",1,
+177,77,F,114,65,194,49,90,24.0,Nao,Nao,Nao,Moderado,75,Angina tipica,"Inchaco nos tornozelos, Tontura",1,
+178,57,F,121,72,218,45,90,21.8,Nao,Nao,Sim,Sedentario,68,Assintomatico,Nenhum sintoma relatado,0,
+179,53,F,136,81,188,59,85,23.9,Sim,Nao,Nao,Moderado,53,Angina tipica,Nenhum sintoma relatado,0,
+180,59,F,98,65,208,51,90,24.9,Nao,Nao,Nao,Intenso,71,Assintomatico,"Palpitacoes, Suor frio",0,
+181,73,F,150,98,258,36,93,33.8,Nao,Nao,Sim,Sedentario,95,Dor nao anginosa,Inchaco nos tornozelos,0,
+182,58,M,122,75,233,30,103,25.2,Sim,Nao,Sim,Moderado,82,Angina tipica,"Tontura, Palpitacoes, Inchaco nos tornozelos",1,
+183,49,F,124,84,181,54,91,26.7,Sim,Nao,Nao,Moderado,66,Angina tipica,"Palpitacoes, Suor frio",1,
+184,70,F,117,79,200,66,97,28.5,Nao,Nao,Sim,Moderado,75,Assintomatico,"Inchaco nos tornozelos, Palpitacoes",0,
+185,61,M,114,72,214,50,86,20.3,Sim,Nao,Nao,Sedentario,68,Angina atipica,"Palpitacoes, Inchaco nos tornozelos",1,
+186,77,F,140,83,218,53,99,32.1,Sim,Nao,Nao,Moderado,76,Assintomatico,Fadiga,0,
+187,58,M,109,75,154,48,97,21.4,Nao,Nao,Nao,Intenso,62,Assintomatico,"Fadiga, Palpitacoes",0,
+188,38,M,108,67,260,50,148,28.0,Nao,Sim,Nao,Moderado,84,Assintomatico,Nenhum sintoma relatado,0,
+189,36,F,113,71,151,51,110,25.1,Nao,Sim,Nao,Intenso,61,Assintomatico,Inchaco nos tornozelos,0,
+190,78,F,140,85,179,44,99,31.0,Nao,Nao,Sim,Intenso,75,Angina tipica,"Dor no peito, Tontura, Inchaco nos tornozelos",1,
+191,79,F,141,83,197,52,91,29.4,Nao,Nao,Nao,Sedentario,97,Dor nao anginosa,"Palpitacoes, Dor no peito, Falta de ar",1,
+192,52,M,123,69,188,52,95,18.7,Nao,Nao,Nao,Moderado,76,Angina tipica,Fadiga,1,
+193,50,F,133,86,234,32,182,25.7,Sim,Sim,Sim,Moderado,85,Angina atipica,Inchaco nos tornozelos,1,
+194,75,F,146,87,240,32,84,29.0,Sim,Nao,Sim,Intenso,80,Angina tipica,"Falta de ar, Palpitacoes, Tontura",1,
+195,40,M,136,100,212,38,176,26.1,Nao,Sim,Nao,Sedentario,70,Angina tipica,Falta de ar,1,
+196,42,F,134,78,189,52,94,28.6,Sim,Nao,Sim,Sedentario,57,Assintomatico,Nenhum sintoma relatado,0,
+197,64,M,116,66,205,66,97,29.3,Nao,Nao,Nao,Intenso,84,Assintomatico,Nenhum sintoma relatado,0,
+198,49,M,124,79,177,60,82,28.6,Nao,Nao,Nao,Sedentario,79,Angina tipica,Falta de ar,1,
+199,55,M,139,94,213,27,171,27.8,Sim,Sim,Nao,Moderado,82,Angina tipica,"Fadiga, Falta de ar, Suor frio",1,
+200,53,F,112,70,186,59,91,21.3,Sim,Nao,Nao,Sedentario,76,Angina tipica,"Dor no peito, Falta de ar, Fadiga",1,
+201,60,M,127,82,172,57,65,25.3,Nao,Nao,Nao,Intenso,82,Dor nao anginosa,Falta de ar,1,
+202,75,M,143,79,224,36,89,28.3,Nao,Nao,Nao,Intenso,62,Angina tipica,"Dor no peito, Tontura, Fadiga",1,
+203,56,M,141,84,245,39,90,25.1,Sim,Nao,Sim,Sedentario,79,Angina tipica,"Inchaco nos tornozelos, Dor no peito, Falta de ar",1,
+204,64,M,144,84,241,53,170,30.1,Nao,Sim,Nao,Moderado,71,Angina tipica,"Fadiga, Falta de ar",1,
+205,26,M,129,71,208,51,174,30.2,Nao,Sim,Nao,Sedentario,94,Angina tipica,"Fadiga, Tontura, Palpitacoes",1,
+206,54,F,110,69,183,46,77,25.3,Nao,Nao,Nao,Moderado,75,Angina atipica,"Falta de ar, Suor frio",0,
+207,43,M,122,64,149,56,82,16.3,Nao,Nao,Nao,Moderado,53,Angina tipica,"Suor frio, Falta de ar",1,
+208,38,F,94,55,160,45,65,19.3,Nao,Nao,Nao,Moderado,46,Angina tipica,Palpitacoes,0,
+209,43,F,118,70,207,46,86,33.1,Sim,Nao,Nao,Sedentario,76,Assintomatico,Nenhum sintoma relatado,0,
+210,50,M,147,87,246,50,153,27.0,Nao,Sim,Nao,Sedentario,81,Assintomatico,"Suor frio, Tontura",1,
+211,68,M,140,89,220,46,86,21.2,Nao,Nao,Nao,Moderado,67,Dor nao anginosa,Nenhum sintoma relatado,0,
+212,36,F,110,70,162,48,168,29.9,Nao,Sim,Nao,Moderado,89,Assintomatico,"Tontura, Fadiga",0,
+213,55,M,125,82,150,60,102,25.9,Nao,Nao,Nao,Moderado,74,Dor nao anginosa,Palpitacoes,0,
+214,48,M,128,83,196,54,93,31.1,Sim,Nao,Nao,Sedentario,84,Assintomatico,"Inchaco nos tornozelos, Palpitacoes",0,
+215,50,F,126,84,211,59,88,27.7,Nao,Nao,Sim,Sedentario,69,Dor nao anginosa,Inchaco nos tornozelos,1,
+216,69,F,126,78,210,57,104,28.0,Nao,Nao,Sim,Intenso,81,Assintomatico,Inchaco nos tornozelos,0,
+217,63,F,132,83,169,58,92,28.0,Nao,Nao,Nao,Sedentario,72,Assintomatico,Nenhum sintoma relatado,0,
+218,74,M,134,86,201,49,82,30.5,Nao,Nao,Nao,Sedentario,80,Angina atipica,"Palpitacoes, Fadiga",1,
+219,53,F,121,76,148,59,71,32.0,Nao,Nao,Nao,Intenso,72,Assintomatico,Fadiga,0,
+220,45,F,115,69,164,56,87,28.3,Nao,Nao,Nao,Sedentario,54,Assintomatico,Suor frio,0,
+221,52,M,129,78,170,47,138,21.8,Nao,Sim,Sim,Moderado,90,Dor nao anginosa,Inchaco nos tornozelos,1,
+222,58,F,124,73,184,35,119,29.2,Nao,Nao,Sim,Sedentario,82,Angina tipica,"Palpitacoes, Fadiga",1,
+223,57,M,143,91,186,40,93,30.8,Nao,Nao,Sim,Intenso,89,Angina atipica,Falta de ar,1,
+224,40,M,119,73,179,52,83,29.4,Nao,Nao,Nao,Moderado,60,Angina atipica,Inchaco nos tornozelos,0,
+225,56,F,131,78,177,50,78,25.7,Nao,Nao,Sim,Intenso,69,Dor nao anginosa,Nenhum sintoma relatado,0,
+226,58,M,113,67,201,59,99,30.8,Nao,Nao,Nao,Sedentario,67,Dor nao anginosa,Nenhum sintoma relatado,0,
+227,90,M,139,80,275,36,149,32.9,Nao,Sim,Nao,Moderado,92,Angina tipica,"Fadiga, Tontura",1,
+228,81,F,141,92,189,53,99,36.2,Nao,Nao,Nao,Moderado,81,Angina tipica,"Suor frio, Dor no peito",1,
+229,43,F,132,82,208,54,102,25.2,Sim,Nao,Sim,Sedentario,75,Assintomatico,"Palpitacoes, Suor frio",1,
+230,51,F,107,62,218,48,97,25.0,Nao,Nao,Sim,Sedentario,66,Angina atipica,Nenhum sintoma relatado,0,
+231,35,F,138,90,205,50,89,26.7,Nao,Nao,Sim,Sedentario,69,Dor nao anginosa,Nenhum sintoma relatado,0,
+232,47,F,109,65,162,52,99,23.8,Nao,Nao,Sim,Intenso,69,Assintomatico,Nenhum sintoma relatado,0,
+233,59,M,143,82,245,55,94,25.2,Sim,Nao,Sim,Moderado,77,Angina tipica,"Dor no peito, Palpitacoes, Inchaco nos tornozelos",1,
+234,72,M,130,86,208,50,83,18.9,Nao,Nao,Nao,Moderado,74,Angina tipica,"Tontura, Fadiga",1,
+235,45,M,119,71,207,43,114,24.5,Nao,Nao,Nao,Moderado,85,Assintomatico,Nenhum sintoma relatado,0,
+236,46,M,118,71,171,59,88,25.8,Nao,Nao,Nao,Moderado,65,Dor nao anginosa,"Palpitacoes, Falta de ar",0,
+237,25,F,111,69,179,65,101,24.5,Sim,Nao,Nao,Moderado,84,Assintomatico,"Palpitacoes, Dor no peito",0,
+238,53,M,120,80,220,45,65,33.6,Nao,Nao,Sim,Sedentario,74,Angina atipica,Nenhum sintoma relatado,0,
+239,40,M,121,75,204,53,161,26.7,Sim,Sim,Nao,Moderado,77,Dor nao anginosa,Nenhum sintoma relatado,0,
+240,48,M,142,82,250,47,110,32.6,Sim,Nao,Nao,Sedentario,83,Dor nao anginosa,Nenhum sintoma relatado,0,
+241,43,M,111,72,182,42,169,27.4,Nao,Sim,Nao,Intenso,59,Assintomatico,Falta de ar,0,
+242,54,F,105,63,186,56,164,28.6,Nao,Sim,Nao,Moderado,85,Dor nao anginosa,Tontura,1,
+243,30,M,137,94,214,34,99,28.7,Sim,Nao,Nao,Sedentario,79,Angina atipica,"Inchaco nos tornozelos, Palpitacoes, Falta de ar",1,
+244,34,M,122,76,222,42,137,31.7,Nao,Sim,Sim,Moderado,85,Angina atipica,"Falta de ar, Fadiga, Inchaco nos tornozelos",1,
+245,85,M,147,80,240,43,146,30.8,Nao,Sim,Sim,Sedentario,86,Assintomatico,Dor no peito,1,
+246,37,M,109,69,223,51,195,28.5,Nao,Sim,Nao,Intenso,75,Assintomatico,Nenhum sintoma relatado,0,
+247,40,F,103,74,172,55,85,25.8,Nao,Nao,Nao,Intenso,58,Angina atipica,Nenhum sintoma relatado,0,
+248,81,M,128,87,181,50,106,26.6,Nao,Nao,Nao,Intenso,90,Angina tipica,Tontura,1,
+249,92,M,152,103,275,37,161,31.1,Nao,Sim,Nao,Sedentario,92,Angina tipica,Dor no peito,1,
+250,39,M,114,66,239,51,84,33.4,Nao,Nao,Nao,Sedentario,76,Angina tipica,Falta de ar,0,
+251,50,F,141,92,230,52,83,26.5,Nao,Nao,Sim,Sedentario,90,Angina tipica,"Falta de ar, Inchaco nos tornozelos, Tontura",1,
+252,60,F,126,75,248,39,189,29.2,Nao,Sim,Nao,Sedentario,91,Assintomatico,"Fadiga, Inchaco nos tornozelos, Suor frio",1,
+253,79,F,138,87,249,38,198,33.7,Sim,Sim,Nao,Sedentario,96,Angina tipica,"Inchaco nos tornozelos, Tontura, Falta de ar",1,
+254,41,F,128,73,144,51,80,29.4,Nao,Nao,Nao,Sedentario,58,Assintomatico,Nenhum sintoma relatado,0,
+255,52,F,114,67,131,42,96,25.3,Nao,Nao,Nao,Intenso,62,Dor nao anginosa,"Suor frio, Falta de ar",0,
+256,66,M,123,73,213,40,101,19.7,Nao,Nao,Sim,Sedentario,69,Dor nao anginosa,Tontura,0,
+257,61,M,125,82,193,60,91,28.9,Sim,Nao,Nao,Sedentario,84,Assintomatico,Nenhum sintoma relatado,0,
+258,50,F,150,97,217,43,185,22.0,Sim,Sim,Sim,Moderado,88,Angina tipica,"Suor frio, Palpitacoes, Inchaco nos tornozelos",1,
+259,53,M,117,74,153,48,88,28.9,Nao,Nao,Nao,Moderado,51,Assintomatico,Nenhum sintoma relatado,0,
+260,36,F,118,66,213,36,89,27.4,Sim,Nao,Sim,Moderado,74,Assintomatico,Dor no peito,0,
+261,52,M,121,73,162,49,80,29.7,Nao,Nao,Sim,Moderado,61,Dor nao anginosa,"Tontura, Dor no peito, Falta de ar",1,
+262,51,F,120,71,179,64,104,23.4,Nao,Nao,Nao,Intenso,73,Assintomatico,"Suor frio, Dor no peito",0,
+263,58,F,109,72,215,51,83,20.8,Nao,Nao,Nao,Moderado,56,Assintomatico,Falta de ar,1,
+264,47,M,120,80,167,61,96,27.2,Nao,Nao,Nao,Moderado,78,Assintomatico,Fadiga,1,
+265,62,F,119,79,207,54,91,26.0,Nao,Nao,Nao,Moderado,76,Angina tipica,"Suor frio, Fadiga, Tontura",1,
+266,69,F,138,82,200,50,79,25.9,Nao,Nao,Nao,Sedentario,96,Angina atipica,"Inchaco nos tornozelos, Suor frio, Dor no peito",1,
+267,57,F,136,71,218,37,85,27.5,Nao,Nao,Nao,Sedentario,85,Angina atipica,"Dor no peito, Palpitacoes",0,
+268,60,M,117,64,214,58,109,35.1,Nao,Nao,Nao,Moderado,70,Angina tipica,"Fadiga, Dor no peito",0,
+269,56,M,128,86,230,43,94,30.4,Nao,Nao,Nao,Sedentario,87,Angina tipica,"Tontura, Suor frio",1,
+270,55,F,131,79,223,55,144,30.4,Nao,Sim,Sim,Moderado,64,Dor nao anginosa,"Falta de ar, Inchaco nos tornozelos",1,
+271,45,M,123,73,184,40,149,30.2,Nao,Sim,Nao,Sedentario,70,Angina tipica,"Palpitacoes, Dor no peito, Tontura",1,
+272,59,M,148,100,271,39,107,34.4,Nao,Sim,Sim,Sedentario,92,Angina atipica,"Dor no peito, Suor frio, Falta de ar",1,
+273,54,F,139,93,220,43,152,28.6,Sim,Sim,Nao,Sedentario,67,Dor nao anginosa,Suor frio,1,
+274,84,F,139,86,261,35,95,23.6,Nao,Nao,Sim,Moderado,91,Angina tipica,"Palpitacoes, Dor no peito, Falta de ar",1,
+275,77,M,122,74,219,49,87,27.1,Nao,Nao,Nao,Sedentario,71,Dor nao anginosa,"Fadiga, Suor frio, Inchaco nos tornozelos",1,
+276,60,M,135,83,208,47,109,29.3,Sim,Nao,Nao,Moderado,76,Assintomatico,Nenhum sintoma relatado,0,
+277,44,M,120,76,201,45,73,23.4,Sim,Sim,Nao,Intenso,65,Angina atipica,"Palpitacoes, Suor frio",1,
+278,39,M,133,90,172,64,93,25.8,Nao,Nao,Nao,Sedentario,77,Assintomatico,Falta de ar,0,
+279,72,F,130,83,194,52,116,26.1,Nao,Nao,Sim,Moderado,83,Assintomatico,Fadiga,0,
+280,59,M,129,84,224,41,91,32.0,Nao,Nao,Nao,Sedentario,90,Angina tipica,"Dor no peito, Palpitacoes, Inchaco nos tornozelos",1,
+281,62,M,140,93,196,55,71,28.8,Nao,Nao,Nao,Sedentario,74,Assintomatico,"Dor no peito, Inchaco nos tornozelos, Tontura",1,
+282,31,F,111,63,214,45,87,28.3,Sim,Nao,Nao,Moderado,66,Assintomatico,Suor frio,0,
+283,68,M,101,66,179,44,109,27.7,Nao,Nao,Nao,Intenso,68,Assintomatico,"Fadiga, Palpitacoes",0,
+284,61,M,143,87,190,52,97,28.0,Nao,Nao,Nao,Sedentario,70,Angina tipica,"Inchaco nos tornozelos, Dor no peito",1,
+285,39,F,120,62,226,34,82,27.8,Nao,Nao,Nao,Moderado,81,Angina tipica,"Inchaco nos tornozelos, Palpitacoes, Fadiga",1,
+286,48,F,128,69,203,54,84,23.7,Sim,Nao,Nao,Sedentario,84,Angina tipica,Dor no peito,1,
+287,59,F,126,73,224,43,85,20.9,Sim,Nao,Nao,Moderado,103,Dor nao anginosa,"Inchaco nos tornozelos, Suor frio, Falta de ar",1,
+288,56,F,118,76,165,52,96,26.2,Nao,Nao,Nao,Moderado,65,Dor nao anginosa,Dor no peito,0,
+289,51,M,101,63,198,60,108,25.7,Nao,Nao,Nao,Moderado,63,Assintomatico,Falta de ar,0,
+290,54,F,113,71,157,59,105,29.3,Nao,Nao,Nao,Moderado,64,Assintomatico,Nenhum sintoma relatado,0,
+291,51,F,126,88,187,43,97,31.6,Sim,Nao,Nao,Sedentario,77,Angina atipica,Nenhum sintoma relatado,0,
+292,57,F,103,58,170,62,76,30.0,Nao,Nao,Nao,Moderado,71,Angina atipica,Inchaco nos tornozelos,1,
+293,76,F,138,85,224,38,180,26.6,Nao,Sim,Nao,Moderado,89,Angina tipica,"Fadiga, Palpitacoes",1,
+294,19,F,108,68,174,46,114,23.8,Nao,Sim,Nao,Moderado,77,Angina atipica,Nenhum sintoma relatado,0,
+295,52,F,111,65,231,48,76,28.2,Nao,Nao,Nao,Sedentario,69,Assintomatico,Nenhum sintoma relatado,0,
+296,57,M,128,80,206,56,89,36.0,Sim,Nao,Nao,Sedentario,90,Angina tipica,"Tontura, Suor frio, Palpitacoes",1,
+297,59,F,129,72,218,60,96,32.2,Nao,Nao,Sim,Sedentario,83,Angina atipica,"Dor no peito, Fadiga, Inchaco nos tornozelos",1,
+298,50,M,124,84,146,53,78,30.9,Nao,Nao,Nao,Sedentario,78,Angina atipica,"Inchaco nos tornozelos, Palpitacoes, Falta de ar",1,
+299,30,F,113,67,178,44,80,24.4,Nao,Nao,Sim,Sedentario,68,Dor nao anginosa,"Fadiga, Palpitacoes",0,
+300,60,F,132,92,213,48,91,25.2,Nao,Nao,Sim,Sedentario,103,Assintomatico,"Dor no peito, Palpitacoes, Inchaco nos tornozelos",1,

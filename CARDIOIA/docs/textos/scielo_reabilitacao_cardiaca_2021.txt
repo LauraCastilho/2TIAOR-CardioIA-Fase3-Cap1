@@ -1,0 +1,203 @@
+                                                                        Editorial
+
+Qual é o Cenário Atual da Reabilitação Cardíaca no Brasil e em Portugal?
+
+What is the Current Scenario of Cardiac Rehabilitation in Brazil and Portugal?
+
+Ricardo Stein,1 Mauricio Milani,2 Ana Abreu3,4
+
+Universidade Federal do Rio Grande do Sul,1 Porto Alegre, RS – Brasil
+Fitcordis Medicina do Exercício,2 Brasília, DF – Brasil
+Hospital Santa Maria, CHULN,3 Lisboa – Portugal
+Faculdade Medicina Lisboa,4 Lisboa – Portugal
+
+   Brasil e Portugal têm muito em comum e estão ligados                 metanálises4,5 têm mostrado que a sua implementação pode
+por fortes laços de uma história que começou a ser escrita há           ter um impacto imenso na vida das pessoas, sendo uma ação
+mais de cinco séculos. A língua é a mesma, embora existam               útil para a sociedade como um todo. Agora, perguntamos: Se
+diferenças marcantes no sotaque, assim como no vocabulário.             um paciente com cardiopatia isquêmica não é antiagregado
+A ponte aérea entre os dois países é intensa (à parte, a                (seja lá com que fármaco for), o que pensaríamos do
+pandemia de COVID-19) e cidadãos vindos dos dois lados do               cardiologista que cuida desse paciente? Ou se um paciente
+Oceano Atlântico habitam ou visitam cidades do além-mar.                com dislipidemia com colesterol total de 267 mg/dL e LDL
+Enfim, o sangue português corre nas veias (e nas artérias) de           de 191 mg/dL não recebesse uma prescrição de estatina? Ou
+muitos brasileiros e, nos últimos anos, uma verdadeira onda             ainda e “indo mais fundo”, se um paciente com infarto agudo
+de brasileiros imigrou para Portugal, percorrendo o caminho             do miocárdio (IAM) com supradesnivelamento de ST não fosse
+inverso àquele feito por Pedro Álvares Cabral, quando este e            reperfundido, estando disponível um hemodinamista e uma
+suas embarcações chegaram a “Terra Brasilis”.                           sala de hemodinâmica? Imaginamos que o caso iria para o
+                                                                        conselho de ética médica... e com toda razão! No entanto, são
+   Agora, talvez confuso, quem lê este texto possa se                   poucos aqueles no meio médico que conseguem vislumbrar o
+perguntar: Mas qual a relação das linhas acima com a                    enorme vazio que fica, enquanto conduta baseada nas melhores
+reabilitação cardíaca (RC)? Qual é o verdadeiro motivo                  evidências, que é NÃO encaminhar um paciente isquêmico
+para este texto ser escrito por uma portuguesa e dois                   após um IAM ou um paciente com insuficiência cardíaca (IC)
+brasileiros, todos cardiologistas e adeptos da RC? Na                   de qualquer etiologia para um serviço de RC. Embora, em
+verdade, o objetivo é traçar um breve perfil do que ocorre              teoria seja absolutamente entendida a indicação, na prática ela
+com a RC nos dois países, tentando informar o leitor a                  é extremamente subutilizada, seja em Portugal seja no Brasil,
+respeito de uma realidade absolutamente desconectada                    como veremos nos parágrafos abaixo.
+daquela que vemos em outras áreas da Cardiologia. Sem
+inveja, mas com preocupação enquanto reabilitadores,                    Qual é o cenário atual da reabilitação cardíaca no Brasil?
+vemos a Cardiologia florescer em termos de medicamentos
+e dispositivos que mudam a qualidade e a quantidade de                     No Brasil o cenário é alarmante, sendo o número de
+vida dos pacientes,1 terapêuticas baseadas nas melhores                 programas de RC documentados extremamente insuficiente
+evidências sendo descritas em Diretrizes, procedimentos                 para a necessidade clínica, o que certamente é prejudicial
+invasivos que salvam vidas ou diminuem significativos danos,            para a saúde da população brasileira com doenças cardíacas
+além de vermos a medicina personalizada “batendo na                     crônicas. Vamos às evidências: em um estudo publicado
+porta” e prometendo uma potencial revolução no manejo                   em 2020, Britto et al.6 estimaram que no Brasil haja apenas
+de doenças monogênicas e poligênicas. Enfim, onde há                    uma vaga em um serviço de RC para cada 99 pacientes com
+investimento, divulgação e marketing, a Cardiologia é um                cardiopatia isquêmica, sendo esta disponibilidade quase
+exemplo inequívoco de sucesso.                                          três vezes menor do que a observada em outros 32 países
+                                                                        avaliados (uma vaga para cada 32,7 pacientes). Em outro
+   É importante salientar que, apesar de ainda se encontrar             estudo que avaliou a disponibilidade e a densidade mundial
+nos bastidores da terapêutica cardiológica, a RC, em diferentes         da RC,7 este tipo de serviço foi identificado em 111/203
+cenários clínicos,2,3 é uma estratégia de saúde na qual tanto a         países e a relação global de vagas para cada paciente com
+classe de recomendação quanto o nível de evidência não deixam           cardiopatia isquêmica foi de 1:11, o que demonstra uma
+nada a desejar, quando comparada com situações auspiciosas              triste realidade.
+como as descritas no parágrafo acima. Revisões sistemáticas e
+                                                                           Dados não publicados sobre a disponibilidade de
+Palavras-chave                                                          serviços de RC8 identificaram o funcionamento de apenas
+                                                                        59 programas de RC no Brasil, sendo a maioria destes
+   Reabilitação; Prevenção Secundária; Exercício; Coração.              (71%) concentrados nas regiões Sul (20%) e Sudeste (51%)
+                                                                        do país, o que demonstra não só a escassez, como também
+Correspondência: Ricardo Stein •                                        a heterogeneidade na distribuição nacional. Em relação às
+Universidade Federal do Rio Grande do Sul - Rua Ramiro Barcelos, 2350.  vagas disponíveis, a situação fica ainda mais concentrada,
+CEP 90035-903, Serviço de Fisiatria/Térreo, Porto Alegre, RS – Brasil   visto que 69% delas estão na região Sudeste, o que expõe
+E-mail: kuqui.r@gmail.com                                               a grande lacuna de vagas e serviços nas demais regiões
+                                                                        brasileiras. A partir dos dados supracitados, os autores
+ DOI: https://doi.org/10.36660/abc.20220210
+
+                                                                        858 Arq Bras Cardiol. 2022; 118(5):858-860
+Stein et al.
+Reabilitação Cardíaca no Brasil e em Portugal
+
+Editorial
+
+também calcularam a disponibilidade nacional de vagas de RC       de exercício (podendo variar de 12 até 36 semanas). Por sua
+para atendimentos após a alta hospitalar: o número de vagas       vez, os programas de fase 3 têm uma frequência de uma a três
+para atender estes pacientes após o evento cardiovascular         sessões semanais, com opção de prazo de longa duração em
+representou menos de 2% da necessidade.8                          alguns casos. Todos os centros têm equipes multidisciplinares,
+                                                                  incluindo sempre cardiologista, frequentemente na
+   Para complicar ainda mais a já crítica situação brasileira,    coordenação dos programas. Além do exercício, os programas
+no que diz respeito à pouca disponibilidade de serviços de        incluíram sempre aconselhamento nutricional, a maioria com
+RC, o início da pandemia COVID-19 impactou seriamente             controle de fatores de risco, alguns com cessação tabágica
+na funcionalidade destes serviços, sendo que 81% dos              e com intervenção psicológica. Em outras palavras, isto
+programas de RC relataram interrupção ou encerramento             demanda na preparação de equipes com capacidade para
+de suas atividades assistenciais, acrescido de mais 14%           intervir através dos vários componentes da RC, o que já é
+de serviços que reduziram o número de vagas até então             uma realidade em alguns hospitais e universidades, como
+disponibilizadas.8 Não há informações científicas sobre o         acontece com o Mestrado em Reabilitação Cardiovascular da
+retorno do funcionamento destes serviços até o presente           Faculdade de Medicina de Universidade de Lisboa,17 curso
+momento, porém, informalmente, estima-se que a                    de formação avançada destinado a diferentes especialistas.
+capacidade de atendimento ainda não tenha retornado               Aliás, a oferta de profissionais habilitados pode inclusive ser
+ao nível pré-pandemia. Além disso, os serviços de RC que          fator primordial no aparecimento de novos programas de RC.
+reiniciaram suas atividades passaram a receber um novo
+fluxo de pacientes pós-COVID-19, o que pode ter reduzido             Outro dado interessante é que em 2019,13 verificou-se
+ainda mais a disponibilidade de vagas para os pacientes           um aumento de 13% nos pacientes que foram encaminhados
+portadores de cardiopatias crônicas ou agudas após alta           para RC, comparativamente ao questionário prévio de 2014,12
+hospitalar, piorando ainda mais o cenário “catastrófico”          sobretudo no sistema público de saúde. Entretanto, apesar
+da RC no Brasil.                                                  do aumento numérico de pacientes reabilitados, apenas
+                                                                  9,3% daqueles com alguma síndrome coronariana aguda
+Qual é o cenário atual da reabilitação cardíaca em Portugal?      (SCA – causa mais frequente de indicação de reabilitação),
+                                                                  foram de fato reabilitados. Sendo assim, se pensarmos que
+   Nos últimos anos a RC tem apresentado progressiva              100% destes pacientes deveriam participar de programas de
+melhora, tanto em número quanto em qualidade. No entanto,         RC para melhorar a qualidade de vida e reduzir o reinfarto
+é sabido que ainda está longe do ideal. Neste cenário, o          e a mortalidade,4,18 estaremos diante de um cenário deveras
+Grupo de Estudos de Fisiologia de Esforço e Reabilitação          subótimo. Por sua vez, a IC de diferentes etiologias foi a
+Cardíaca da Sociedade Portuguesa de Cardiologia tem               segunda indicação mais frequente para a fase 2 e 3 (com
+realizado questionários recorrentes aos Centros de RC para        aumento de 1,8% em relação ao questionário prévio de
+avaliar a evolução da RC em Portugal.9-13 No último inquérito,    2014),12 incluindo-se aí a reabilitação após implantação de
+datado de 2019,13 foram registrados 25 centros (33% de            dispositivos cardíacos (aumento de 3,1%). Seguramente, o
+aumento do número em relação a 2014)12 com programas              encaminhamento para programas de RC em pacientes após
+de RC, assim considerados de acordo com padrões nacionais         SCA ou com diagnóstico de IC necessita ser melhorado, assim
+e europeus.14,15 Destes, 11 centros localizam-se na região        como a oferta e a capacitação dos centros.
+norte, 1 na região central, 12 na região da grande Lisboa
+e 1 no sul do país. Verifica-se que esta concentração de             Causas para não adesão dos pacientes aos programas de
+centros diz respeito às grandes cidades e região litorânea do     RC em Portugal, como em outros países, são a dificuldade
+país, o que reflete a grande heterogeneidade com manifesta        de transporte, distância ao centro de reabilitação, problemas
+carência de centros de reabilitação em regiões rurais, nas        financeiros, falta de suporte familiar, falta de motivação,
+pequenas cidades e vilas, assim como no interior, o que vai       desconhecimento dos benefícios e riscos do exercício, assim
+contra às recomendações da Organização Mundial de Saúde           como problemas laborais. E para dificultar um pouco mais,
+para a igualdade no acesso à Saúde.16 Se considerarmos que        nos últimos dois anos, a pandemia COVID-19 veio juntar-se
+anualmente cerca de 10.000 portugueses têm alta hospitalar        às causas de não adesão, fazendo com que alguns centros
+por infarto do miocárdio e se estes fossem distribuídos           desenvolvessem programas à distância para tentar minimizar
+uniformemente no território nacional (o que não é o caso),        o obstáculo de isolamento social.
+teoricamente cada centro de reabilitação teria que reabilitar
+400 pacientes, só em relação a esta patologia (excluindo-            Por fim, apesar de melhorias significativas, a RC em
+se outras causas de doença cardiovascular). Partindo do           Portugal ainda está longe do que seria o desejável, tanto no
+princípio que os programas de fase 2 teriam 3 meses de            encaminhamento, quanto no que diz respeito a uma melhor
+duração, quantos e quais os centros seriam capazes de             distribuição de programas pelo país.
+reabilitar 100 pacientes de cada vez, adicionando aí os
+números de pacientes com outras patologias? E como                Conclusão
+conseguir uma fase 3 a longo prazo?
+                                                                     O panorama da RC no Brasil e em Portugal ainda é
+   Não é só na distribuição geográfica dos centros em território  deficiente e necessita grande investimento, em especial
+Português que se verifica essa grande heterogeneidade, mas        se considerarmos que esta intervenção de prevenção
+também nos tipos de programas instituídos, com desenho            secundária é essencial e pode salvar vidas. Neste contexto
+e duração variável. Em sua maioria, programas de fase 2           e para uma implementação efetiva necessitamos:
+apresentam uma frequência semanal de duas a três sessões
+
+859 Arq Bras Cardiol. 2022; 118(5):858-860
+                                                                                                                                        Stein et al.
+                                                                                          Reabilitação Cardíaca no Brasil e em Portugal
+
+                                                                                                          Editorial
+
+   1) Promover a divulgação adequada da RC através dos meios                              financeiros e falta de suporte familiar; c) falta de motivação
+de comunicação, assim como estimular políticas de saúde por                               e desconhecimento dos benefícios e riscos do exercício; d)
+meio das sociedades científicas e dos próprios profissionais de                           problemas de horário laboral.
+saúde, tanto a nível individual, quanto institucional;
+                                                                                             Finalmente, é claro para nós que se todos os agentes
+   2) Aumentar o encaminhamento por meio da educação                                      potencialmente envolvidos no processo de implementação de
+para a prevenção de profissionais de saúde e da criação de um                             programas de reabilitação nos dois países (governo, agentes de
+sistema de referenciamento dos pacientes, com indicação tão                               saúde, sociedade civil, entre outros), investirem “um quinhão”,
+cedo quanto na alta hospitalar;                                                           o resultado irá muito além “do milhão”. Ou seja, ao se fazer
+                                                                                          uma medicina embasada nas melhores evidências e com um
+   3) Combater as causas para não adesão dos pacientes aos                                custo relativamente baixo, o resultado pode ser um ganho
+programas de RC, tais como: a) dificuldade de transporte                                  substancial de vidas, redução de sofrimento e até diminuição
+e a distância ao centro de reabilitação; b) problemas                                     significativa em gastos com a saúde da população.
+
+Referências                                                                               11. Abreu A, Bettencourt N, Fontes P. Overview of Cardiac Rehabilitation in
+                                                                                                Portugal 2007-2009. Rev Port Cardiol. 2010;29(4):545-58.
+1. Précoma DB, Oliveira GMM, Simão AF, Dutra OP, Coelho OR, Izar MCO,
+      et al. Updated Cardiovascular Prevention Guideline of the Brazilian Society         12. Silveira C, Abreu A. Cardiac Rehabilitation in Portugal: Results from the
+      of Cardiology - 2019. Arq Bras Cardiol. 2019;113(4):787-91. doi: 10.5935/                 2013-14 National Survey. Rev Port Cardiol. 2016;35(12):659-668. doi:
+      abc.20190204.                                                                             10.1016/j.repc.2016.06.006.
+
+2. Carvalho T, Milani M, Ferraz AS, Silveira ADD, Herdy AH, Hossri CAC, et al.            13. Fontes JP, Vilela EM, Durazzo A, Teixeira M. Current state of Cardiac
+      Brazilian Cardiovascular Rehabilitation Guideline - 2020. Arq Bras Cardiol.               Rehabilitation in Portugal: Results of the 2019 National Survey. Rev Port
+      2020;114(5):943-987. doi: 10.36660/abc.20200407.                                          Cardiol. 2021;40(11):877-87. doi: 10.1016/j.repce.2021.10.024.
+
+3. Ambrosetti M, Abreu A, Corrà U, Davos CH, Hansen D, Frederix I, et al.                 14. Abreu A, Mendes M, Dores H, Silveira C, Fontes P, Teixeira M, et
+      Secondary Prevention Through Comprehensive Cardiovascular Rehabilitation:                 a. Mandatory Criteria for Cardiac Rehabilitation Programs: 2018
+      From Knowledge to Implementation. 2020 Update. A position Paper from the                  Guidelines from the Portuguese Society of Cardiology. Rev Port Cardiol.
+      Secondary Prevention and Rehabilitation Section of the European Association               2018;37(5):363-73. doi: 10.1016/j.repc.2018.02.006.
+      of Preventive Cardiology. Eur J Prev Cardiol. 2020:2047487320913379. doi:
+      10.1177/2047487320913379.                                                           15. Abreu A, Frederix I, Dendale P, Janssen A, Doherty P, Piepoli MF, et al.
+                                                                                                Standardization and Quality Improvement of Secondary Prevention
+4. Anderson L, Oldridge N, Thompson DR, Zwisler AD, Rees K, Martin N, et al.                    Through Cardiovascular Rehabilitation Programmes in Europe: The
+      Exercise-Based Cardiac Rehabilitation for Coronary Heart Disease: Cochrane                Avenue Towards EAPC Accreditation Programme: A Position Statement
+      Systematic Review and Meta-Analysis. J Am Coll Cardiol. 2016;67(1):1-12. doi:             of the Secondary Prevention and Rehabilitation Section of the European
+      10.1016/j.jacc.2015.10.044.                                                               Association of Preventive Cardiology (EAPC). Eur J Prev Cardiol.
+                                                                                                2020:2047487320924912. doi: 10.1177/2047487320924912.
+5. Taylor RS, Sagar VA, Davies EJ, Briscoe S, Coats AJ, Dalal H, et al. Exercise-
+      Based Rehabilitation for Heart Failure. Cochrane Database Syst Rev.                 16. World Health Organization. Governance for health equity: taking forward
+      2014;2014(4):CD003331. doi: 10.1002/14651858.CD003331.pub4.                               the equity values and goals of Health 2020 in the WHO European
+                                                                                                Region [internet]. Geneva: World Health Organization; 2013 [cited
+6. Britto RR, Supervia M, Turk-Adawi K, Chaves GSDS, Pesah E, Lopez-Jimenez F,                  2022 Apr 6]. Available from: https://www.euro.who.int/__data/assets/
+      et al. Cardiac Rehabilitation Availability and Delivery in Brazil: A Comparison to        pdf_file/0020/235712/e96954.pdf
+      Other Upper Middle-Income Countries. Braz J Phys Ther. 2020;24(2):167-76.
+      doi: 10.1016/j.bjpt.2019.02.011.                                                    17. Universidade de Lisboa. Faculdade de Medicina. Cardiovascular
+                                                                                                Rehabilitation [Internet]. Lisboa: Faculdade de Medicina; 2022 [cited
+7. Turk-Adawi K, Supervia M, Lopez-Jimenez F, Pesah E, Ding R, Britto RR,                       2022 Apr 6]. Available from: https://www.medicina.ulisboa.pt/en/
+      et al. Cardiac Rehabilitation Availability and Density around the Globe.                  cardiovascular-rehabilitation.
+      EClinicalMedicine. 2019;13:31-45. doi: 10.1016/j.eclinm.2019.06.007.
+                                                                                          18. Rauch B, Davos CH, Doherty P, Saure D, Metzendorf MI, Salzwedel
+8. Jardim ISC. Impactos da COVID-19 nos programas de reabilitação                               A, et al. The Prognostic Effect of Cardiac Rehabilitation in the era of
+      cardiovascular no Brasil: estudo observacional baseado em um questionário                 Acute Revascularisation and Statin Therapy: A Systematic Review and
+      online [dissertation]. Brasília (DF): Universidade de Brasília; 2021.                     Meta-Analysis of Randomized and Non-Randomized Studies - The
+                                                                                                Cardiac Rehabilitation Outcome Study (CROS). Eur J Prev Cardiol.
+9. Mendes M. National Survey of Cardiac Rehabilitation Programs in Portugal--                   2016;23(18):1914-39. doi: 10.1177/2047487316671181.
+      Situation in 1999. Rev Port Cardiol. 2001;20(1):7-19.
+
+10. Teixeira M, Sampaio F, Brízida L, Mendes M. Cardiac Rehabilitation in Portugal--
+      Developments between 1998 and 2004. Rev Port Cardiol. 2007;26(9):815-25.
+
+Este é um artigo de acesso aberto distribuído sob os termos da licença de atribuição pelo Creative Commons
+                                                                                           860 Arq Bras Cardiol. 2022; 118(5):858-860
+
