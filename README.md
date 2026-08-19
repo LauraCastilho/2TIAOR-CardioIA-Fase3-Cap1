@@ -14,18 +14,18 @@
 
 ## Ecossistema de Cardiologia Inteligente (Graduação ON em Inteligência Artificial)
 
-## 👨‍🎓 Integrantes:
-- Bernardo Naves Doti Avelar — RM566867
-- David Eduardo da Silva Correia — RM567525
-- Laura de Andrade Castilho — RM568507
-- Letícia Grossi Dornelas — RM568172
-- Leonardo Borges Alves da Mota — RM566939
+## 👨‍🎓 Integrantes: 
+- <a href="https://www.linkedin.com/in/bernardo-doti/">Bernardo Naves Doti Avelar - RM566867</a>
+- <a href="https://www.linkedin.com/in/eduardo-correia-29327631/">David Eduardo da Silva Correia - RM567525</a>
+- <a href="https://www.linkedin.com/in/laura-castilho/">Laura de Andrade Castilho - RM568507</a> 
+- <a href="https://www.linkedin.com/in/leticiagdornelas/">Leticia Grossi Dornelas - RM568172</a> 
+- <a href="https://www.linkedin.com/in/leonardo-borges-alves-da-mota-649703177/">Leonardo Borges Alves da Mota - RM566939</a>
 
 ## 👩‍🏫 Professores:
-### Tutor(a)
-- Ana Cristina dos Santos
+### Tutor(a) 
+- <a href="https://www.linkedin.com/in/anacristinadossantos/">Ana Cristina dos Santos</a>
 ### Coordenador(a)
-- André Godoi Chiovato
+- <a href="https://www.linkedin.com/in/andregodoichiovato/">André Godoi Chiovato</a>
 
 
 ## 📜 Descrição
