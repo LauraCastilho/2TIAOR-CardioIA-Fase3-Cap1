@@ -22,9 +22,9 @@
 - <a href="https://www.linkedin.com/in/leonardo-borges-alves-da-mota-649703177/">Leonardo Borges Alves da Mota - RM566939</a>
 
 ## 👩‍🏫 Professores:
-### Tutor(a) 
+### Tutor
 - <a href="https://www.linkedin.com/in/leonardoorabona/">Leonardo Orabona</a>
-### Coordenador(a)
+### Coordenador
 - <a href="https://www.linkedin.com/in/andregodoichiovato/">André Godoi Chiovato</a>
 
 
