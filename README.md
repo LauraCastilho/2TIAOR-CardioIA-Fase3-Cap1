@@ -23,7 +23,7 @@
 
 ## 👩‍🏫 Professores:
 ### Tutor(a) 
-- <a href="https://www.linkedin.com/in/anacristinadossantos/">Ana Cristina dos Santos</a>
+- <a href="https://www.linkedin.com/in/leonardoorabona/">Leonardo Orabona</a>
 ### Coordenador(a)
 - <a href="https://www.linkedin.com/in/andregodoichiovato/">André Godoi Chiovato</a>
 
