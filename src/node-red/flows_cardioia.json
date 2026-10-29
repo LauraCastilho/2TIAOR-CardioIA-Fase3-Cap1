@@ -1,0 +1,468 @@
+[
+  {
+    "id": "f1a0c0d1e2f30001",
+    "type": "tab",
+    "label": "CardioIA - Fase 3",
+    "disabled": false,
+    "info": "Monitoramento contínuo do paciente 0001.\nAssina os tópicos publicados pelo ESP32 no broker público da HiveMQ e monta o dashboard em /ui."
+  },
+  {
+    "id": "b0b0b0b0b0b00001",
+    "type": "mqtt-broker",
+    "name": "HiveMQ (broker público)",
+    "broker": "broker.hivemq.com",
+    "port": "1883",
+    "clientid": "",
+    "autoConnect": true,
+    "usetls": false,
+    "protocolVersion": "4",
+    "keepalive": "60",
+    "cleansession": true,
+    "autoUnsubscribe": true,
+    "birthTopic": "",
+    "birthQos": "0",
+    "birthRetain": "false",
+    "birthPayload": "",
+    "birthMsg": {},
+    "closeTopic": "",
+    "closeQos": "0",
+    "closeRetain": "false",
+    "closePayload": "",
+    "closeMsg": {},
+    "willTopic": "",
+    "willQos": "0",
+    "willRetain": "false",
+    "willPayload": "",
+    "willMsg": {},
+    "userProps": "",
+    "sessionExpiry": ""
+  },
+  {
+    "id": "c0c0c0c0c0c00001",
+    "type": "ui_tab",
+    "name": "CardioIA",
+    "icon": "favorite",
+    "order": 1,
+    "disabled": false,
+    "hidden": false
+  },
+  {
+    "id": "d0d0d0d0d0d00001",
+    "type": "ui_group",
+    "name": "Paciente 0001 · Sinais vitais",
+    "tab": "c0c0c0c0c0c00001",
+    "order": 1,
+    "disp": true,
+    "width": "12",
+    "collapse": false,
+    "className": ""
+  },
+  {
+    "id": "d0d0d0d0d0d00002",
+    "type": "ui_group",
+    "name": "Alertas",
+    "tab": "c0c0c0c0c0c00001",
+    "order": 2,
+    "disp": true,
+    "width": "6",
+    "collapse": false,
+    "className": ""
+  },
+  {
+    "id": "d0d0d0d0d0d00003",
+    "type": "ui_group",
+    "name": "Dispositivo",
+    "tab": "c0c0c0c0c0c00001",
+    "order": 3,
+    "disp": true,
+    "width": "6",
+    "collapse": false,
+    "className": ""
+  },
+  {
+    "id": "e0e0e0e0e0e00001",
+    "type": "mqtt in",
+    "z": "f1a0c0d1e2f30001",
+    "name": "Sinais em tempo real",
+    "topic": "fiap/2tiaor/cardioia/paciente/0001/sinais",
+    "qos": "1",
+    "datatype": "json",
+    "broker": "b0b0b0b0b0b00001",
+    "nl": false,
+    "rap": true,
+    "rh": 0,
+    "inputs": 0,
+    "x": 150,
+    "y": 120,
+    "wires": [
+      [
+        "f0f0f0f0f0f00001",
+        "a1a1a1a1a1a10001",
+        "a2a2a2a2a2a20001"
+      ]
+    ]
+  },
+  {
+    "id": "e0e0e0e0e0e00002",
+    "type": "mqtt in",
+    "z": "f1a0c0d1e2f30001",
+    "name": "Histórico sincronizado",
+    "topic": "fiap/2tiaor/cardioia/paciente/0001/historico",
+    "qos": "1",
+    "datatype": "json",
+    "broker": "b0b0b0b0b0b00001",
+    "nl": false,
+    "rap": true,
+    "rh": 0,
+    "inputs": 0,
+    "x": 160,
+    "y": 460,
+    "wires": [
+      [
+        "f0f0f0f0f0f00003"
+      ]
+    ]
+  },
+  {
+    "id": "e0e0e0e0e0e00003",
+    "type": "mqtt in",
+    "z": "f1a0c0d1e2f30001",
+    "name": "Status do dispositivo",
+    "topic": "fiap/2tiaor/cardioia/paciente/0001/status",
+    "qos": "1",
+    "datatype": "utf8",
+    "broker": "b0b0b0b0b0b00001",
+    "nl": false,
+    "rap": true,
+    "rh": 0,
+    "inputs": 0,
+    "x": 160,
+    "y": 540,
+    "wires": [
+      [
+        "f0f0f0f0f0f00004"
+      ]
+    ]
+  },
+  {
+    "id": "f0f0f0f0f0f00001",
+    "type": "function",
+    "z": "f1a0c0d1e2f30001",
+    "name": "Avaliar limites (fog)",
+    "func": "// Camada fog: reavalia os limites clínicos com os dados recebidos do ESP32.\n// Os limites são os mesmos do firmware, mas ficam aqui para que a equipe\n// clínica possa ajustá-los sem regravar o dispositivo.\nconst LIMITES = { bpmMax: 120, bpmMin: 50, tempMax: 38.0, tempMin: 35.0 };\n\nconst d = msg.payload;\nif (typeof d !== 'object' || d === null) {\n    node.warn('Mensagem ignorada: payload não é JSON');\n    return null;\n}\n\nconst criticos = [];\nconst avisos = [];\n\nif (d.bpm === 0) avisos.push('Sem pulso detectado (verificar sensor)');\nelse if (d.bpm > LIMITES.bpmMax) criticos.push(`Taquicardia: ${d.bpm} bpm`);\nelse if (d.bpm < LIMITES.bpmMin) criticos.push(`Bradicardia: ${d.bpm} bpm`);\n\nif (d.temp === null || d.temp === undefined) avisos.push('Falha na leitura do DHT22');\nelse if (d.temp >= LIMITES.tempMax) criticos.push(`Febre: ${d.temp.toFixed(1)} °C`);\nelse if (d.temp < LIMITES.tempMin) criticos.push(`Hipotermia: ${d.temp.toFixed(1)} °C`);\n\nlet nivel = 'normal';\nif (avisos.length) nivel = 'atencao';\nif (criticos.length) nivel = 'critico';\n\nconst titulos = { normal: 'Sinais dentro dos limites', atencao: 'Atenção', critico: 'ALERTA' };\nconst tempTxt = (d.temp === null || d.temp === undefined) ? '--' : d.temp.toFixed(1) + ' °C';\nconst umidTxt = (d.umid === null || d.umid === undefined) ? '--' : d.umid.toFixed(0) + '% umid.';\nconst status = {\n    nivel,\n    titulo: titulos[nivel],\n    texto: criticos.concat(avisos).join(' | ') || `${d.bpm} bpm · ${tempTxt} · ${umidTxt}`,\n    hora: new Date().toLocaleTimeString('pt-BR')\n};\n\n// A saída 5 só dispara quando o nível muda para crítico, para não repetir\n// o mesmo alerta a cada leitura (ponto de integração para notificações).\nlet evento = null;\nconst anterior = context.get('nivel') || 'normal';\nif (nivel === 'critico' && anterior !== 'critico') {\n    evento = { payload: { paciente: d.paciente, seq: d.seq, alertas: criticos, recebido_em: new Date().toISOString() } };\n}\ncontext.set('nivel', nivel);\n\nreturn [\n    d.bpm > 0 ? { topic: 'BPM', payload: d.bpm } : null,\n    (d.temp === null || d.temp === undefined) ? null : { payload: d.temp },\n    (d.umid === null || d.umid === undefined) ? null : { payload: d.umid },\n    { payload: status },\n    evento\n];",
+    "outputs": 5,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 420,
+    "y": 120,
+    "wires": [
+      [
+        "a3a3a3a3a3a30001"
+      ],
+      [
+        "a3a3a3a3a3a30002"
+      ],
+      [
+        "a3a3a3a3a3a30003"
+      ],
+      [
+        "a3a3a3a3a3a30004"
+      ],
+      [
+        "a2a2a2a2a2a20002"
+      ]
+    ],
+    "outputLabels": [
+      "bpm",
+      "temperatura",
+      "umidade",
+      "status de alerta",
+      "novo alerta crítico"
+    ]
+  },
+  {
+    "id": "a1a1a1a1a1a10001",
+    "type": "trigger",
+    "z": "f1a0c0d1e2f30001",
+    "name": "Watchdog 20 s",
+    "op1": "",
+    "op2": "sem_dados",
+    "op1type": "nul",
+    "op2type": "str",
+    "duration": "20",
+    "extend": true,
+    "overrideDelay": false,
+    "units": "s",
+    "reset": "",
+    "bytopic": "all",
+    "topic": "topic",
+    "outputs": 1,
+    "x": 400,
+    "y": 300,
+    "wires": [
+      [
+        "f0f0f0f0f0f00002"
+      ]
+    ]
+  },
+  {
+    "id": "f0f0f0f0f0f00002",
+    "type": "function",
+    "z": "f1a0c0d1e2f30001",
+    "name": "Formatar 'sem dados'",
+    "func": "// Disparado pelo watchdog quando o ESP32 fica 20 s sem publicar.\nmsg.payload = {\n    nivel: 'sem_dados',\n    titulo: 'Sem dados do dispositivo',\n    texto: 'Nenhuma leitura nos últimos 20 s. O wearable pode estar sem conexão; as leituras ficam no buffer local.',\n    hora: new Date().toLocaleTimeString('pt-BR')\n};\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 610,
+    "y": 300,
+    "wires": [
+      [
+        "a3a3a3a3a3a30004"
+      ]
+    ]
+  },
+  {
+    "id": "f0f0f0f0f0f00003",
+    "type": "function",
+    "z": "f1a0c0d1e2f30001",
+    "name": "Contar sincronizadas",
+    "func": "// Leituras que ficaram no buffer do ESP32 durante a queda de conexão.\n// Por enquanto só contamos e exibimos; numa próxima fase elas iriam para um banco.\nlet total = flow.get('sincronizadas') || 0;\nlet ultimoSeq = flow.get('ultimoSeqHistorico') || 0;\nconst d = msg.payload;\n\nif (d && typeof d.seq === 'number') {\n    if (d.seq === ultimoSeq) return null;   // descarta duplicata óbvia\n    ultimoSeq = d.seq;\n}\ntotal += 1;\nflow.set('sincronizadas', total);\nflow.set('ultimoSeqHistorico', ultimoSeq);\n\nmsg.payload = `${total} leituras recuperadas do buffer (última seq ${ultimoSeq}, às ${new Date().toLocaleTimeString('pt-BR')})`;\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 420,
+    "y": 460,
+    "wires": [
+      [
+        "a3a3a3a3a3a30005"
+      ]
+    ]
+  },
+  {
+    "id": "f0f0f0f0f0f00004",
+    "type": "function",
+    "z": "f1a0c0d1e2f30001",
+    "name": "Formatar status",
+    "func": "const online = String(msg.payload).trim() === 'online';\nmsg.payload = online ? '🟢 Online' : '🔴 Offline (Last Will recebido)';\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 400,
+    "y": 540,
+    "wires": [
+      [
+        "a3a3a3a3a3a30006"
+      ]
+    ]
+  },
+  {
+    "id": "a3a3a3a3a3a30001",
+    "type": "ui_chart",
+    "z": "f1a0c0d1e2f30001",
+    "name": "Gráfico BPM",
+    "group": "d0d0d0d0d0d00001",
+    "order": 1,
+    "width": "12",
+    "height": "5",
+    "label": "Frequência cardíaca (bpm)",
+    "chartType": "line",
+    "legend": "false",
+    "xformat": "HH:mm:ss",
+    "interpolate": "linear",
+    "nodata": "Aguardando batimentos...",
+    "dot": true,
+    "ymin": "30",
+    "ymax": "200",
+    "removeOlder": "10",
+    "removeOlderPoints": "",
+    "removeOlderUnit": "60",
+    "cutout": 0,
+    "useOneColor": false,
+    "useUTC": false,
+    "colors": [
+      "#c0392b",
+      "#aec7e8",
+      "#ff7f0e",
+      "#2ca02c",
+      "#98df8a",
+      "#d62728",
+      "#ff9896",
+      "#9467bd",
+      "#c5b0d5"
+    ],
+    "outputs": 1,
+    "useDifferentColor": false,
+    "className": "",
+    "x": 710,
+    "y": 60,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "a3a3a3a3a3a30002",
+    "type": "ui_gauge",
+    "z": "f1a0c0d1e2f30001",
+    "name": "Gauge temperatura",
+    "group": "d0d0d0d0d0d00001",
+    "order": 2,
+    "width": "6",
+    "height": "4",
+    "gtype": "gage",
+    "title": "Temperatura",
+    "label": "°C",
+    "format": "{{value | number:1}}",
+    "min": "30",
+    "max": "42",
+    "colors": [
+      "#3498db",
+      "#2ecc71",
+      "#e74c3c"
+    ],
+    "seg1": "35",
+    "seg2": "38",
+    "diff": false,
+    "className": "",
+    "x": 720,
+    "y": 100,
+    "wires": []
+  },
+  {
+    "id": "a3a3a3a3a3a30003",
+    "type": "ui_gauge",
+    "z": "f1a0c0d1e2f30001",
+    "name": "Gauge umidade",
+    "group": "d0d0d0d0d0d00001",
+    "order": 3,
+    "width": "6",
+    "height": "4",
+    "gtype": "donut",
+    "title": "Umidade da pele",
+    "label": "%",
+    "format": "{{value | number:0}}",
+    "min": "0",
+    "max": "100",
+    "colors": [
+      "#2ecc71",
+      "#f1c40f",
+      "#e67e22"
+    ],
+    "seg1": "70",
+    "seg2": "85",
+    "diff": false,
+    "className": "",
+    "x": 710,
+    "y": 140,
+    "wires": []
+  },
+  {
+    "id": "a3a3a3a3a3a30004",
+    "type": "ui_template",
+    "z": "f1a0c0d1e2f30001",
+    "group": "d0d0d0d0d0d00002",
+    "name": "LED de alerta",
+    "order": 1,
+    "width": "6",
+    "height": "3",
+    "format": "<style>\n  .cardio-alerta { display: flex; align-items: center; gap: 18px; padding: 6px 4px; }\n  .cardio-led { width: 54px; height: 54px; border-radius: 50%; flex-shrink: 0;\n                background: #95a5a6; box-shadow: 0 0 10px rgba(0,0,0,.35) inset; }\n  .cardio-led.normal    { background: #27ae60; box-shadow: 0 0 18px #27ae60; }\n  .cardio-led.atencao   { background: #f39c12; box-shadow: 0 0 18px #f39c12; }\n  .cardio-led.critico   { background: #e74c3c; box-shadow: 0 0 22px #e74c3c; animation: cardio-pisca 0.8s infinite; }\n  .cardio-led.sem_dados { background: #7f8c8d; }\n  .cardio-titulo { font-size: 20px; font-weight: bold; }\n  .cardio-texto  { font-size: 14px; opacity: .85; }\n  @keyframes cardio-pisca { 50% { opacity: .25; } }\n</style>\n<div class=\"cardio-alerta\">\n  <div class=\"cardio-led\" ng-class=\"msg.payload.nivel\"></div>\n  <div>\n    <div class=\"cardio-titulo\">{{msg.payload.titulo || 'Aguardando dados...'}}</div>\n    <div class=\"cardio-texto\">{{msg.payload.texto}}</div>\n    <div class=\"cardio-texto\" ng-if=\"msg.payload.hora\">Atualizado às {{msg.payload.hora}}</div>\n  </div>\n</div>",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 720,
+    "y": 200,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "a3a3a3a3a3a30005",
+    "type": "ui_text",
+    "z": "f1a0c0d1e2f30001",
+    "group": "d0d0d0d0d0d00003",
+    "order": 2,
+    "width": "6",
+    "height": "2",
+    "name": "Texto sincronização",
+    "label": "Resiliência offline",
+    "format": "{{msg.payload}}",
+    "layout": "col-center",
+    "className": "",
+    "style": false,
+    "font": "",
+    "fontSize": 16,
+    "color": "#000000",
+    "x": 660,
+    "y": 460,
+    "wires": []
+  },
+  {
+    "id": "a3a3a3a3a3a30006",
+    "type": "ui_text",
+    "z": "f1a0c0d1e2f30001",
+    "group": "d0d0d0d0d0d00003",
+    "order": 1,
+    "width": "6",
+    "height": "1",
+    "name": "Texto status",
+    "label": "Wearable",
+    "format": "{{msg.payload}}",
+    "layout": "row-spread",
+    "className": "",
+    "style": false,
+    "font": "",
+    "fontSize": 16,
+    "color": "#000000",
+    "x": 620,
+    "y": 540,
+    "wires": []
+  },
+  {
+    "id": "a2a2a2a2a2a20001",
+    "type": "debug",
+    "z": "f1a0c0d1e2f30001",
+    "name": "Payload recebido",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 410,
+    "y": 180,
+    "wires": []
+  },
+  {
+    "id": "a2a2a2a2a2a20002",
+    "type": "debug",
+    "z": "f1a0c0d1e2f30001",
+    "name": "Novo alerta crítico",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": true,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "payload.alertas",
+    "statusType": "msg",
+    "x": 720,
+    "y": 240,
+    "wires": []
+  }
+]

@@ -10,7 +10,7 @@
 
 <br>
 
-# CardioIA — Fase 1: Batimentos de Dados
+# CardioIA — Fase 3: Monitoramento Contínuo (IoT na Saúde)
 
 ## Ecossistema de Cardiologia Inteligente (Graduação ON em Inteligência Artificial)
 
@@ -30,153 +30,173 @@
 
 ## 📜 Descrição
 
-As doenças cardiovasculares continuam sendo a principal causa de morte no mundo, respondendo por cerca de 17,9 milhões de óbitos por ano. Boa parte desses eventos — infartos, arritmias, insuficiência cardíaca, AVCs — poderia ser evitada ou tratada a tempo com diagnóstico precoce, algo em que a Inteligência Artificial tem potencial real de ajudar, seja antecipando riscos, seja personalizando o acompanhamento do paciente.
+Na Fase 1 do CardioIA montamos a base de dados do projeto: pacientes simulados, textos clínicos e imagens de ECG. Nesta **Fase 3** o foco muda para o paciente fora do hospital. A proposta é simular um **wearable cardíaco** que acompanha sinais vitais continuamente, processa as leituras no próprio dispositivo, envia os dados para a nuvem e mostra tudo em um dashboard com alertas automáticos.
 
-É nesse cenário que se encaixa o **CardioIA**, projeto acadêmico do curso de Graduação ON em Inteligência Artificial da FIAP. A proposta é construir, ao longo de sete fases, uma plataforma digital que simule um ecossistema completo de cardiologia moderna: triagem, diagnóstico assistido por IA, monitoramento contínuo via IoT, análise de imagens médicas por Visão Computacional, um assistente virtual para pacientes e, por fim, previsão de eventos cardíacos críticos.
+O protótipo foi construído com um **ESP32 no simulador Wokwi**. Ele usa um sensor **DHT22**, que mede temperatura e umidade, e um **botão de pressão** que representa os batimentos cardíacos: cada aperto é um batimento, e o BPM é calculado pelo intervalo entre os apertos. Uma chave deslizante simula a conexão Wi-Fi caindo e voltando, e dois LEDs mostram o estado de alerta e de conexão.
 
-Esta entrega corresponde à **Fase 1 — Batimentos de Dados**, na qual assumimos o papel de cientistas de dados hospitalares. Antes de qualquer modelo de IA existir, é preciso ter dados — e dados de saúde carregam restrições éticas, legais (LGPD) e de privacidade que tornam essa etapa muito mais desafiadora do que parece à primeira vista. Datasets clínicos reais raramente estão disponíveis publicamente em formato pronto para uso, o que nos levou a optar deliberadamente por **dados simulados** em duas das três partes da atividade, documentando essa escolha com transparência em vez de tentar contornar a restrição.
+O trabalho está dividido nas duas partes pedidas no enunciado:
 
-O repositório reúne três tipos de dados que, juntos, alimentarão os módulos das próximas fases do CardioIA:
+1. **Parte 1 – Edge Computing.** O ESP32 coleta e avalia as leituras localmente. Sem conexão, guarda tudo em um buffer de até 6 horas, espelhado no SPIFFS, e sincroniza quando a conexão volta.
+2. **Parte 2 – Fog/Cloud Computing.** As leituras são publicadas via **MQTT** no broker da **HiveMQ** e consumidas por um fluxo no **Node-RED**. Esse fluxo reavalia os limites clínicos e monta um dashboard com gráfico de BPM, gauges de temperatura e umidade, um LED virtual de alerta e o status do dispositivo.
 
-1. **Dados numéricos** de pacientes cardiológicos (idade, pressão arterial, colesterol, sintomas, histórico, entre outras variáveis clínicas), gerados de forma sintética mas com correlações estatísticas plausíveis entre as variáveis, pensando no que futuramente alimentará os classificadores da Fase 2;
-2. **Dados textuais** reais, buscados em fontes públicas (Project Gutenberg e SciELO), relacionados à fisiologia e à saúde cardiovascular, pensando na Fase 5 (NLP e assistente virtual);
-3. **Imagens de ECG** sintéticas, geradas a partir de um modelo matemático de batimento cardíaco, pensando na Fase 4 (Visão Computacional).
+O ciclo completo fica assim: **captura → processamento → transmissão → visualização → alerta**.
 
-Cada uma dessas partes é detalhada nas seções abaixo, com a origem dos dados, as variáveis consideradas mais relevantes do ponto de vista clínico e uma justificativa de como cada tipo de dado poderá ser explorado por algoritmos de IA nas fases seguintes — sempre com um olho na governança de dados e nos possíveis vieses embutidos em qualquer processo de simulação.
+```mermaid
+flowchart LR
+    subgraph Edge["Edge · ESP32 (Wokwi)"]
+        S1[DHT22<br/>temperatura e umidade] --> P[Avaliação local<br/>de limites]
+        S2[Botão<br/>batimentos] --> P
+        P --> B[(Buffer 6 h<br/>RAM + SPIFFS)]
+        P --> L[LEDs de alerta<br/>e conexão]
+    end
+    subgraph Cloud["Cloud"]
+        M[Broker MQTT<br/>HiveMQ]
+    end
+    subgraph Fog["Fog · Node-RED"]
+        F[Reavaliação de limites<br/>+ watchdog] --> D[Dashboard<br/>gráfico · gauges · alerta]
+    end
+    P -- "online: .../sinais" --> M
+    B -- "ao reconectar: .../historico" --> M
+    M --> F
+```
 
 
 ## 📁 Estrutura de pastas
 
-Dentre os arquivos e pastas presentes na raiz do projeto, definem-se:
-
-- <b>docs</b>: Pasta destinada à documentação textual, incluindo brainstorm, atas e registros de reuniões, desenhos, prints, diagramas, storyboard, estratégia de IA e arquitetura e etc. Nesta fase, contém também `docs/textos` (os dois textos da Parte 2) e `docs/amostras_ecg` (uma amostra das imagens da Parte 3, para visualização rápida sem precisar baixar o pacote completo).
-
-- <b>src</b>: Todo o código fonte desenvolvido, como scripts em Python, R, JS ou HTML, notebooks, códigos para ESP32/Arduino, APIs ou microsserviços, além de modelos, inferências e etc. Nesta fase contém os scripts que geram o dataset numérico e as imagens de ECG sintéticas.
-
-- <b>data</b>: Contém os dados utilizados, como arquivos CSV, Excel, JSON, bases sintéticas e etc. Nesta fase contém o dataset numérico (`pacientes_cardiologicos.csv`) e a pasta `imagens_ecg` com as 150 imagens de ECG geradas (não versionada no Git por volume — ver link de download abaixo).
-
-- <b>README.md</b>: Arquivo que serve como guia e explicação geral sobre o projeto (o mesmo que você está lendo agora).
-
-- <b>Ir Além</b>: pasta onde os arquivos referentes às atividades "Ir Além" devem ser inseridos, evitando misturar com as entregas principais. Não utilizada nesta entrega.
-
-
-‼️ OBSERVAÇÃO DO TUTOR, favor desconsiderar do seu arquivo final: não há obrigação de usar todas as pastas, use apenas o que fizer SENTIDO para a entrega. ‼️
+- <b>src/esp32/parte1_edge</b>: Firmware da Parte 1 (`sketch.ino`), circuito do Wokwi (`diagram.json`) e bibliotecas (`libraries.txt`).
+- <b>src/esp32/parte2_mqtt</b>: Firmware da Parte 2, com Wi-Fi, NTP e MQTT, no mesmo circuito.
+- <b>src/node-red</b>: Fluxo do Node-RED exportado (`flows_cardioia.json`), pronto para importar.
+- <b>docs/relatorios</b>: Relatório da Parte 1 (fluxo e resiliência) e relatório da Parte 2 (MQTT e dashboard).
+- <b>docs/prints</b>: Prints do Wokwi, do fluxo e do dashboard.
+- <b>Ir Além</b>: Atividades opcionais, não desenvolvidas nesta fase.
+- <b>data</b>, <b>docs/textos</b>, <b>docs/amostras_ecg</b> e os scripts Python em <b>src</b>: material da Fase 1, mantido no repositório (ver seção "Fases anteriores").
 
 
 ---
 
-## 🩺 Parte 1 — Dados Numéricos (IoT)
+## 🔌 Parte 1 — Armazenamento e processamento local (Edge Computing)
 
-**Arquivo:** [`data/pacientes_cardiologicos.csv`](data/pacientes_cardiologicos.csv) · **Formato:** CSV · **Linhas:** 300 pacientes (mínimo pedido: 100)
+**Projeto no Wokwi:** <https://wokwi.com/projects/479245897650476033>
+**Código comentado:** [`src/esp32/parte1_edge/sketch.ino`](src/esp32/parte1_edge/sketch.ino)
+**Relatório:** [`docs/relatorios/relatorio_parte1_edge.md`](docs/relatorios/relatorio_parte1_edge.md)
 
-**Link para download (OneDrive/Google Drive):** <https://drive.google.com/file/d/1nGFAhySLkrh2F6JwyKHVZk_XLFjmA6td/view?usp=sharing> (pacote também contém as imagens da Parte 3)
+| Componente | Pino | Função |
+|---|---|---|
+| DHT22 | GPIO 15 | Temperatura (pele) e umidade (sudorese). |
+| Botão de pressão | GPIO 4 | Batimentos cardíacos (1 aperto = 1 batimento). |
+| Chave deslizante | GPIO 18 | Conectividade Wi-Fi simulada. |
+| LED vermelho | GPIO 26 | Alerta crítico na última leitura. |
+| LED verde | GPIO 27 | Online (aceso) ou sincronizando (piscando). |
 
-### Origem dos dados
+**Como funciona a resiliência.** A cada 5 s o ESP32 lê os sensores e avalia os limites clínicos na própria placa. Com a chave em "conectado", a leitura sai na hora pelo `Serial.println`, que representa a nuvem. Com a chave em "desconectado", a leitura vai para um buffer circular em RAM e para o arquivo `/buffer.csv` no SPIFFS. Quando a conexão volta, o buffer é enviado em lotes, do mais antigo para o mais novo, e o arquivo é apagado.
 
-Dados **simulados**, não pertencem a nenhum paciente real. Foram gerados pelo script [`src/gerar_dataset_numerico.py`](src/gerar_dataset_numerico.py), que sorteia cada variável a partir de distribuições estatísticas (normal, categórica) e as correlaciona por meio de um "score de risco" latente — por exemplo, pacientes mais velhos, tabagistas, diabéticos ou com histórico familiar tendem a apresentar pressão arterial e colesterol mais altos, e maior probabilidade de diagnóstico positivo para doença cardiovascular. A geração usa uma seed fixa (42), então o dataset é reprodutível.
+**Estratégia de armazenamento limitado.** O buffer guarda **4.320 amostras, o equivalente a 6 horas offline**, pensando em uma noite de sono longe do roteador. Cada amostra ocupa 14 bytes, cerca de 60 KB no total. Se o buffer encher, sai primeiro a **leitura normal mais antiga**, e os alertas críticos são preservados. Como o SPIFFS é volátil no Wokwi, o Monitor Serial registra cada armazenamento e cada sincronização como evidência.
 
-Optamos por dados simulados nesta parte porque datasets reais de pacientes cardíacos são protegidos por sigilo médico e LGPD, e as bases públicas anonimizadas que existem (ex. Cleveland Heart Disease) são pequenas, antigas e não trazem todas as variáveis pedidas no enunciado (como texto livre de sintomas). Simular nos permitiu montar um dataset do tamanho e formato que as próximas fases vão precisar, sem esbarrar nessas restrições.
 
-### Variáveis e relevância clínica
+## ☁️ Parte 2 — Transmissão para nuvem e visualização (Fog/Cloud Computing)
 
-| Variável | Relevância clínica |
+**Projeto no Wokwi:** <https://wokwi.com/projects/479246355425275905>
+**Código do ESP32:** [`src/esp32/parte2_mqtt/sketch.ino`](src/esp32/parte2_mqtt/sketch.ino)
+**Fluxo do Node-RED:** [`src/node-red/flows_cardioia.json`](src/node-red/flows_cardioia.json)
+**Relatório:** [`docs/relatorios/relatorio_parte2_mqtt_dashboard.md`](docs/relatorios/relatorio_parte2_mqtt_dashboard.md)
+
+O ESP32 publica no broker público `broker.hivemq.com:1883`, com suporte opcional ao HiveMQ Cloud com TLS. Os tópicos são:
+
+| Tópico | Conteúdo |
 |---|---|
-| `idade`, `sexo` | Fatores de risco não modificáveis; a incidência de doença coronariana cresce com a idade e varia entre sexos (risco masculino maior antes da menopausa). |
-| `pressao_sistolica_mmhg`, `pressao_diastolica_mmhg` | Hipertensão é um dos principais fatores de risco cardiovascular modificáveis e um dos sinais vitais mais monitorados em qualquer triagem. |
-| `colesterol_total_mg_dl`, `colesterol_hdl_mg_dl` | Dislipidemia (colesterol alto, HDL baixo) está diretamente ligada à formação de placas ateroscleróticas. |
-| `glicemia_jejum_mg_dl`, `diabetico` | Diabetes é comorbidade de altíssimo impacto no risco cardiovascular. |
-| `imc` | Obesidade associada a hipertensão, diabetes e sobrecarga cardíaca. |
-| `tabagista` | Fator de risco modificável com forte evidência causal para eventos coronarianos. |
-| `historico_familiar_dcv` | Componente genético/hereditário do risco cardiovascular. |
-| `nivel_atividade_fisica` | Sedentarismo é fator de risco; atividade física é medida de prevenção primária. |
-| `frequencia_cardiaca_repouso_bpm` | Sinal vital simples de se monitorar (inclusive via wearable, tema da Fase 3) e indicador de condicionamento e de arritmias. |
-| `tipo_dor_peito`, `sintomas_relatados` | Texto/categorias que representam a queixa clínica — insumo direto para os módulos de triagem e para NLP em fases futuras. |
-| `diagnostico_dcv` | Variável-alvo (0/1) pensada para servir de rótulo aos classificadores supervisionados da Fase 2. |
-| `ecg_imagem_ref` | Chave que liga este dataset às imagens de ECG da Parte 3, para os primeiros 150 pacientes — simula a integração entre prontuário e exame de imagem. |
+| `fiap/2tiaor/cardioia/paciente/0001/sinais` | Leitura atual (JSON), a cada 5 s. |
+| `fiap/2tiaor/cardioia/paciente/0001/historico` | Leituras do buffer enviadas depois de uma queda. |
+| `fiap/2tiaor/cardioia/paciente/0001/status` | `online` / `offline`, retido, com `offline` vindo do Last Will. |
+
+O dashboard do Node-RED tem:
+
+- **Gráfico** da frequência cardíaca, com os últimos 10 minutos.
+- **Gauge** de temperatura, com faixas coloridas nos limites clínicos, e gauge de umidade.
+- **LED virtual de alerta**: verde, laranja, vermelho piscando ou cinza quando o dispositivo para de enviar.
+- **Status do dispositivo** e contador de leituras recuperadas do buffer.
+
+### Limites de alerta definidos pelo grupo
+
+| Condição | Limite | Nível |
+|---|---|---|
+| Taquicardia | BPM > 120 | Crítico |
+| Bradicardia | BPM < 50 | Crítico |
+| Febre | Temperatura ≥ 38,0 °C | Crítico |
+| Hipotermia | Temperatura < 35,0 °C | Crítico |
+| Sem pulso / falha no sensor | BPM = 0 ou DHT22 sem leitura | Atenção |
+| Dispositivo sem enviar | 20 s sem mensagens | Sem dados |
+
+Os limites são avaliados no ESP32, para os alertas locais funcionarem sem internet, e novamente no Node-RED, onde podem ser ajustados por paciente sem regravar o firmware.
 
 
-## 📄 Parte 2 — Dados Textuais (NLP)
+## 📸 Evidências
 
-**Pasta:** [`docs/textos/`](docs/textos/)
+| Parte 1 – online | Parte 1 – offline | Parte 1 – sincronização |
+|---|---|---|
+| ![Parte 1 online](docs/prints/wokwi_parte1_online.png) | ![Parte 1 offline](docs/prints/wokwi_parte1_offline.png) | ![Parte 1 sincronização](docs/prints/wokwi_parte1_sync.png) |
 
-| Arquivo | Fonte | Tipo | Licença |
-|---|---|---|---|
-| `harvey_1628_motion_of_the_heart.txt` | [Project Gutenberg — eBook #67065](https://www.gutenberg.org/ebooks/67065): *An Anatomical Disquisition on the Motion of the Heart & Blood in Animals*, William Harvey (1628), tradução de Robert Willis (1906) | Literatura clássica / obra fundadora da cardiologia moderna | Domínio público |
-| `scielo_reabilitacao_cardiaca_2021.txt` (+ PDF original) | [SciELO Brasil — Arquivos Brasileiros de Cardiologia](https://www.scielo.br/j/abc/a/5L54CbkWFrQkd9pHMg6R7Nj/?lang=pt): "Qual é o Cenário Atual da Reabilitação Cardíaca no Brasil e em Portugal?", Stein, Milani & Abreu (2021) | Editorial científico, acesso aberto | CC BY 4.0 |
+| Parte 2 – MQTT no Wokwi | Fluxo no Node-RED |
+|---|---|
+| ![Parte 2 MQTT](docs/prints/wokwi_parte2_mqtt.png) | ![Fluxo Node-RED](docs/prints/nodered_fluxo.png) |
 
-O texto de Harvey foi escolhido de propósito por ser o documento que, em 1628, descreveu pela primeira vez a circulação sanguínea como hoje a entendemos — é literalmente o ponto de partida histórico do que o CardioIA tenta modernizar com IA. Já o editorial da SciELO traz um recorte atual e nacional do sistema de saúde, com estatísticas, comparação Brasil/Portugal e uma leitura crítica sobre a subutilização da reabilitação cardíaca.
+| Dashboard normal | Dashboard em alerta | Dashboard sem dados |
+|---|---|---|
+| ![Dashboard normal](docs/prints/dashboard_normal.png) | ![Dashboard em alerta](docs/prints/dashboard_alerta.png) | ![Dashboard offline](docs/prints/dashboard_offline.png) |
 
-### Como esses textos podem ser explorados por NLP
-
-- **Extração de entidades e termos clínicos**: identificar nomes de estruturas anatômicas, sintomas, doenças e medicamentos citados nos dois textos (NER), útil para popular um vocabulário/dicionário médico do futuro chatbot da Fase 5.
-- **Sumarização automática**: o editorial da SciELO é um bom candidato para testar resumo automático de artigo científico, uma funcionalidade que pode apoiar profissionais de saúde a acompanhar literatura rapidamente.
-- **Análise de sentimento/tom**: o editorial usa termos como "cenário alarmante" e "extremamente subutilizada" — dá para testar classificadores de urgência/tom em texto clínico-institucional, relevante para triagem de mensagens de pacientes.
-- **Classificação de tópicos**: separar trechos por tema (fatores de risco, barreiras de acesso, recomendações de política pública) é um exercício direto de topic modeling.
-- **Comparação diacrônica de linguagem médica**: colocar o texto de 1628 (traduzido) ao lado do texto de 2021 permite observar a evolução do vocabulário médico sobre o mesmo órgão, um exercício interessante de linguística computacional.
-
-Esse tipo de análise é relevante para um projeto de IA em saúde porque boa parte da informação clínica ainda existe em texto livre — prontuários, artigos, relatos de pacientes — e a capacidade de extrair estrutura desse texto é o que viabiliza desde chatbots de triagem até sistemas de apoio à decisão clínica.
+| Dashboard após a sincronização do buffer |
+|---|
+| ![Dashboard sincronizado](docs/prints/dashboard_sincronizado.png) |
 
 
-## 🫀 Parte 3 — Dados Visuais (Visão Computacional)
+## 🔧 Como executar o código
 
-**Pasta local:** `data/imagens_ecg/` (150 imagens, não versionada no Git — ver link abaixo) · **Amostra versionada:** [`docs/amostras_ecg/`](docs/amostras_ecg/) (6 imagens)
+### Wokwi (Partes 1 e 2)
 
-**Link para download do pacote completo (OneDrive/Google Drive):** <https://drive.google.com/file/d/1nGFAhySLkrh2F6JwyKHVZk_XLFjmA6td/view?usp=sharing>
+1. Acesse <https://wokwi.com> e crie um novo projeto **ESP32**.
+2. Substitua o conteúdo de `sketch.ino` e `diagram.json` pelos arquivos da pasta da parte desejada.
+3. No **Library Manager** do Wokwi, adicione as bibliotecas listadas em `libraries.txt`: `DHT sensor library for ESPx` e, na Parte 2, `PubSubClient`.
+4. Inicie a simulação e abra o Monitor Serial.
+5. Aperte o botão vermelho no ritmo dos batimentos. Clicar no DHT22 permite mudar a temperatura e a umidade. A chave deslizante liga e desliga a conexão.
 
-### Origem dos dados
+### Node-RED (Parte 2)
 
-Optamos por **ECGs sintéticos** em vez de imagens de exames reais. Bancos de ECG reais existem (ex. MIT-BIH, PTB-XL), mas em sua maioria distribuem sinais brutos, não imagens prontas, e usar exames de pacientes reais — mesmo que anonimizados — levanta questões de consentimento e reidentificação que preferimos não assumir num projeto de sala de aula. Optamos por gerar as imagens com o script [`src/gerar_ecgs_sinteticos.py`](src/gerar_ecgs_sinteticos.py), que constrói cada batimento somando cinco pulsos gaussianos (ondas P, Q, R, S, T — abordagem clássica de simulação de ECG, inspirada no modelo de McSharry/ECGSYN) e encadeia os batimentos ao longo de uma tira de 10 segundos.
+Pré-requisitos: Node.js 18 ou superior.
 
-Para dar variedade real ao conjunto (e não gerar 150 imagens praticamente idênticas), o script varia a frequência cardíaca sorteada por imagem, e uma fração das imagens simula ritmo irregular (variabilidade de intervalo RR, sugerindo arritmia) ou alteração de onda T (sugerindo isquemia). O arquivo `data/imagens_ecg/_metadados_ecg.csv` registra, por imagem, a frequência cardíaca estimada, o ritmo (regular/irregular) e uma classificação visual — útil como rótulo de referência para a Fase 4.
+```bash
+npm install -g --unsafe-perm node-red
+node-red
+```
 
-### Como essas imagens podem ser exploradas por Visão Computacional
+1. Abra <http://localhost:1880>, vá em **Menu → Gerenciar paleta → Instalar** e instale `node-red-dashboard`.
+2. Vá em **Menu → Importar**, selecione o arquivo `src/node-red/flows_cardioia.json` e clique em **Deploy**.
+3. Abra o dashboard em <http://localhost:1880/ui>.
+4. Com a simulação da Parte 2 rodando no Wokwi, os dados aparecem em poucos segundos.
 
-- **Detecção de picos (peak detection)**: localizar os complexos QRS na imagem/sinal é o primeiro passo de qualquer pipeline automatizado de ECG, permitindo calcular frequência cardíaca e intervalos RR.
-- **Detecção de bordas e segmentação do traçado**: separar o traçado (linha vermelha escura) do fundo quadriculado é um exercício direto de pré-processamento de imagem (thresholding, detecção de bordas) antes de qualquer classificação.
-- **Reconhecimento de padrões/anomalias**: treinar um classificador (CNN) para diferenciar ritmo regular de irregular, ou identificar alteração de onda T, é exatamente o tipo de tarefa prevista para a Fase 4 do CardioIA.
-- **Ligação com dados tabulares**: como cada imagem está referenciada no dataset numérico da Parte 1 (`ecg_imagem_ref`), esse conjunto também serve para testar, futuramente, modelos multimodais que combinam sinais tabulares e imagem.
+### Usando o HiveMQ Cloud em vez do broker público
 
-Automatizar a leitura de ECG é particularmente valioso em contextos de triagem com poucos cardiologistas disponíveis (o que o próprio texto da Parte 2 sobre reabilitação cardíaca no Brasil já evidencia como um problema real de acesso), daí a relevância desse tipo de análise para um projeto de IA aplicado à saúde.
+No `sketch.ino` da Parte 2, troque `USAR_HIVEMQ_CLOUD` para `1` e preencha host, usuário e senha do cluster. No Node-RED, edite o nó de broker para a porta 8883, com TLS habilitado e as mesmas credenciais.
 
 
-## 🔒 Governança de Dados e Vieses
+## 🗂 Fases anteriores
 
-Como as Partes 1 e 3 usam dados **simulados**, o maior risco de governança aqui não é vazamento de dados sensíveis (não existe paciente real), e sim o risco de **viés embutido no próprio gerador** ser confundido, mais adiante, com um padrão epidemiológico real. Por isso:
-
-- Todo arquivo simulado está claramente identificado como tal neste README e nos próprios scripts que o geram — nenhuma fase futura deve tratar `pacientes_cardiologicos.csv` ou as imagens de ECG como dado real sem essa ressalva.
-- As correlações usadas no gerador (ex. peso maior para tabagismo e histórico familiar) são simplificações baseadas em conhecimento geral de fatores de risco, não em estudos epidemiológicos brasileiros — um modelo treinado sobre elas aprende a lógica do gerador, não a realidade clínica do país, e isso precisa ser dito explicitamente antes de qualquer conclusão ser tirada dele.
-- A distribuição de sexo, idade e das demais variáveis foi escolhida de forma aproximadamente balanceada de propósito, mas isso não reflete necessariamente a distribuição real da população de pacientes cardíacos atendidos no SUS ou na rede privada — algo a revisitar se o grupo decidir buscar dados reais nas próximas fases.
-- Os dois textos da Parte 2 são reais e públicos, mas representam pontos de vista específicos (um tratado do século XVII e um editorial de 2021 com recorte Brasil/Portugal) — não devem ser tomados como cobertura representativa de toda a literatura médica sobre o tema.
-- Mesmo sendo dados fictícios, tratamos o dataset como se fosse sensível (sem nomes, sem identificadores reais, `paciente_id` sequencial e artificial) como exercício de boa prática de anonimização.
+O material da **Fase 1 – Batimentos de Dados** continua no repositório: dataset numérico em `data/`, textos para NLP em `docs/textos/`, amostras de ECG em `docs/amostras_ecg/` e os scripts geradores em `src/`. O README completo daquela entrega pode ser consultado no histórico do repositório: <https://github.com/LauraCastilho/2TIAOR-CardioIA-Fase1-Cap1/blob/f5064d3/README.md>.
 
 
 ## 📎 Links e Observações
 
 - <b>Repositório GitHub</b>: <https://github.com/LauraCastilho/2TIAOR-CardioIA-Fase1-Cap1>
-- <b>Dataset numérico (Parte 1) e pacote de imagens de ECG (Parte 3)</b>: <https://drive.google.com/file/d/1nGFAhySLkrh2F6JwyKHVZk_XLFjmA6td/view?usp=sharing> (mesmo pacote .zip contém os dois)
-- <b>Explicação de decisões técnicas</b>: ver seções "Origem dos dados" de cada parte, acima.
-- <b>Observações Gerais</b>: atividade não está vinculada a nenhuma competição externa.
-
-
-## 🔧 Como executar o código
-
-Pré-requisitos: Python 3.12+ com `numpy`, `pandas` e `matplotlib`.
-
-```bash
-pip install numpy pandas matplotlib
-
-cd src
-python gerar_dataset_numerico.py   # gera ../data/pacientes_cardiologicos.csv
-python gerar_ecgs_sinteticos.py    # gera ../data/imagens_ecg/*.png e ../docs/amostras_ecg/*.png
-```
-
-Ambos os scripts usam uma seed fixa, então rodar novamente reproduz exatamente os mesmos arquivos.
+- <b>Wokwi – Parte 1</b>: <https://wokwi.com/projects/479245897650476033>
+- <b>Wokwi – Parte 2</b>: <https://wokwi.com/projects/479246355425275905>
+- <b>Explicação de decisões técnicas</b>: ver os dois relatórios em `docs/relatorios`.
+- <b>Observações Gerais</b>: atividade não está vinculada a nenhuma competição externa. O broker público foi usado apenas com dados simulados. Os cuidados para uso com dados reais estão na seção de segurança do relatório da Parte 2.
 
 
 ## 🗃 Histórico de lançamentos
 
+* 0.3.0 - 29/10/2026
+    * Entrega da Fase 3 – Monitoramento Contínuo: wearable simulado com ESP32 (DHT22 + botão de batimentos), resiliência offline com buffer de 6 h, publicação MQTT na HiveMQ e dashboard no Node-RED com alertas.
 * 0.1.0 - 18/08/2026
-    * Entrega da Fase 1 — Batimentos de Dados: dataset numérico simulado (300 pacientes), dois textos reais para NLP (Gutenberg + SciELO) e 150 imagens de ECG sintéticas para Visão Computacional.
+    * Entrega da Fase 1 – Batimentos de Dados: dataset numérico simulado (300 pacientes), dois textos reais para NLP e 150 imagens de ECG sintéticas.
 
 ---
 
