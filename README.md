@@ -179,12 +179,12 @@ No `sketch.ino` da Parte 2, troque `USAR_HIVEMQ_CLOUD` para `1` e preencha host,
 
 ## 🗂 Fases anteriores
 
-O material da **Fase 1 – Batimentos de Dados** continua no repositório: dataset numérico em `data/`, textos para NLP em `docs/textos/`, amostras de ECG em `docs/amostras_ecg/` e os scripts geradores em `src/`. O README completo daquela entrega pode ser consultado no histórico do repositório: <https://github.com/LauraCastilho/2TIAOR-CardioIA-Fase1-Cap1/blob/f5064d3/README.md>.
+O material da **Fase 1 – Batimentos de Dados** continua no repositório: dataset numérico em `data/`, textos para NLP em `docs/textos/`, amostras de ECG em `docs/amostras_ecg/` e os scripts geradores em `src/`. O README completo daquela entrega pode ser consultado no histórico do repositório: <https://github.com/LauraCastilho/2TIAOR-CardioIA-Fase3-Cap1/blob/f5064d3/README.md>.
 
 
 ## 📎 Links e Observações
 
-- <b>Repositório GitHub</b>: <https://github.com/LauraCastilho/2TIAOR-CardioIA-Fase1-Cap1>
+- <b>Repositório GitHub</b>: <https://github.com/LauraCastilho/2TIAOR-CardioIA-Fase3-Cap1>
 - <b>Wokwi – Parte 1</b>: <https://wokwi.com/projects/479245897650476033>
 - <b>Wokwi – Parte 2</b>: <https://wokwi.com/projects/479246355425275905>
 - <b>Explicação de decisões técnicas</b>: ver os dois relatórios em `docs/relatorios`.
@@ -194,7 +194,10 @@ O material da **Fase 1 – Batimentos de Dados** continua no repositório: datas
 ## 🗃 Histórico de lançamentos
 
 * 0.3.0 - 29/10/2026
-    * Entrega da Fase 3 – Monitoramento Contínuo: wearable simulado com ESP32 (DHT22 + botão de batimentos), resiliência offline com buffer de 6 h, publicação MQTT na HiveMQ e dashboard no Node-RED com alertas.
+    * Entrega da Fase 3 – Monitoramento Contínuo (IoT na Saúde).
+    * Parte 1: wearable simulado no Wokwi com ESP32, DHT22 e botão de batimentos, avaliação de limites clínicos na borda e resiliência offline com buffer de 4.320 leituras (6 h) espelhado no SPIFFS.
+    * Parte 2: publicação MQTT no broker da HiveMQ com Last Will e sincronização do buffer, e dashboard no Node-RED com gráfico de BPM, gauges de temperatura e umidade, LED de alerta e status do dispositivo.
+    * Documentação: relatórios das Partes 1 e 2, prints do Wokwi e do dashboard, e repositório renomeado de Fase1-Cap1 para Fase3-Cap1.
 * 0.1.0 - 18/08/2026
     * Entrega da Fase 1 – Batimentos de Dados: dataset numérico simulado (300 pacientes), dois textos reais para NLP e 150 imagens de ECG sintéticas.
 
