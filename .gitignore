@@ -1,0 +1,15 @@
+# Ambiente Python
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Fase 4 - dados brutos e processados do NIH ChestX-ray14 (gerados pelo notebook 01)
+data/nih_chestxray/
+data/raiox_processado/
+
+# React Native / Expo
+node_modules/
+.expo/
+dist/
+modelos/*.weights.h5

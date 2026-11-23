@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CardioIA · Assistente Cardiológico Virtual</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<header>
+  <div class="marca"><span class="coracao">♥</span> CardioIA</div>
+  <div class="sub">Fase 4 · Assistente Cardiológico Virtual · detecção de cardiomegalia em raio-X de tórax</div>
+</header>
+
+<main>
+  <section class="cartao" id="envio">
+    <h2>1. Envie uma radiografia de tórax</h2>
+    <label id="zona" class="zona" for="arquivo">
+      <input type="file" id="arquivo" accept=".png,.jpg,.jpeg" hidden>
+      <img id="previa" alt="" hidden>
+      <span id="zona-texto">Arraste a imagem aqui ou <u>clique para escolher</u><br><small>PNG ou JPG · incidência frontal (PA ou AP)</small></span>
+    </label>
+
+    <div class="linha">
+      <span class="rotulo">Modelo:</span>
+      <div id="modelos" class="segmentado"></div>
+    </div>
+    <button id="analisar" disabled>Analisar radiografia</button>
+
+    <h3>…ou teste com um exame do conjunto de teste</h3>
+    <div id="amostras" class="amostras"></div>
+  </section>
+
+  <section class="cartao" id="resultado" hidden>
+    <h2>2. Resultado</h2>
+    <div id="carregando" class="carregando" hidden>Analisando…</div>
+    <div id="conteudo" hidden>
+      <div id="faixa" class="faixa">
+        <div id="classe" class="classe"></div>
+        <div id="descricao" class="descricao"></div>
+      </div>
+      <div class="grade">
+        <figure>
+          <img id="img-gradcam" alt="Grad-CAM">
+          <figcaption>
+            <label class="alternar"><input type="checkbox" id="mostrar-calor" checked> mostrar mapa de calor (Grad-CAM)</label>
+            <small>Regiões em vermelho/amarelo foram as que mais pesaram na decisão.</small>
+          </figcaption>
+        </figure>
+        <div>
+          <h3>Probabilidades por categoria</h3>
+          <div id="barras"></div>
+          <dl class="detalhes">
+            <dt>Confiança</dt><dd id="confianca"></dd>
+            <dt>Limiar de decisão</dt><dd id="limiar"></dd>
+            <dt>Modelo</dt><dd id="modelo-usado"></dd>
+            <dt>Tempo de resposta</dt><dd id="tempo"></dd>
+          </dl>
+        </div>
+      </div>
+      <p class="aviso" id="aviso"></p>
+    </div>
+    <div id="erro" class="erro" hidden></div>
+  </section>
+
+  <section class="cartao">
+    <h2>Desempenho dos modelos no conjunto de teste</h2>
+    <div class="tabela-rolagem"><table id="tabela-metricas"></table></div>
+    <p class="nota">Dataset: NIH ChestX-ray14 (cardiomegalia vs. sem achados), split por paciente. Detalhes nos notebooks 01–03 do repositório.</p>
+  </section>
+</main>
+
+<footer>FIAP · 2TIAOR · CardioIA — protótipo acadêmico, não é um dispositivo médico.</footer>
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

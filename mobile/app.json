@@ -1,0 +1,34 @@
+{
+  "expo": {
+    "name": "CardioIA",
+    "slug": "cardioia-fase4",
+    "version": "0.4.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#C0392B",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "O CardioIA acessa suas fotos para você escolher uma radiografia de tórax.",
+          "cameraPermission": "O CardioIA usa a câmera para fotografar uma radiografia de tórax.",
+          "microphonePermission": false
+        }
+      ]
+    ]
+  }
+}
