@@ -193,6 +193,13 @@ O material da **Fase 1 – Batimentos de Dados** continua no repositório: datas
 
 ## 🗃 Histórico de lançamentos
 
+* 0.4.0 - 23/11/2026
+    * Entrega da Fase 4 – Coração em Imagens (Visão Computacional).
+    * Parte 1: pipeline de pré-processamento do NIH ChestX-ray14 para detecção de cardiomegalia, com 8.328 radiografias convertidas para 8 bits / 1 canal, redimensionadas para 224×224, divididas em treino, validação e teste (70/15/15) por paciente e normalizadas com estatísticas do treino.
+    * Parte 2: CNN treinada do zero e transfer learning com ResNet50 (base congelada + fine-tuning do bloco conv5), avaliadas com acurácia, precisão, recall, F1-score, especificidade, AUC-ROC e matriz de confusão, com Grad-CAM para interpretabilidade.
+    * Protótipo: Assistente Cardiológico Virtual em notebook interativo e em interface web com API Flask.
+    * Ir Além 1: análise de vieses por sexo, faixa etária e incidência (PA/AP) com métricas de fairness, intervalos de confiança por bootstrap e mitigação por limiares por grupo.
+    * Ir Além 2: app React Native (Expo) com upload de imagem e exibição da categoria detectada, integrado ao backend Flask.
 * 0.3.0 - 29/10/2026
     * Entrega da Fase 3 – Monitoramento Contínuo (IoT na Saúde).
     * Parte 1: wearable simulado no Wokwi com ESP32, DHT22 e botão de batimentos, avaliação de limites clínicos na borda e resiliência offline com buffer de 4.320 leituras (6 h) espelhado no SPIFFS.
